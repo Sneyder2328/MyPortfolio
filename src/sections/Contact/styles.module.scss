@@ -1,0 +1,106 @@
+@import "../../pages/variables.scss";
+
+.contactWrapper {
+    max-width: $main-width-page;
+    margin: 20px auto 0 auto;
+
+    .contact {
+        background-color: $colorPrimary;
+        border-radius: $radius;
+        padding: 40px;
+        margin-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        .info {
+            box-sizing: border-box;
+            color: $colorOnPrimaryDark2;
+            width: 48.5%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            h4 {
+                font-size: 1.4rem;
+                font-weight: 500;
+                letter-spacing: 1.5px;
+            }
+            p {
+                margin-top: 10px;
+            }
+            .mediums {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                div {
+                    width: 100%;
+                    margin: 6px 0;
+
+                    span {
+                        margin-left: 10px;
+                    }
+                }
+            }
+            .socialLinks {
+                display: flex;
+                align-items: flex-end;
+                * {
+                    margin-right: 16px;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: $colorAccent;
+                    }
+                }
+            }
+        }
+        .form {
+            width: 48.5%;
+            box-sizing: border-box;
+            background-color: #fff;
+            border-radius: $radius;
+            padding: 30px;
+
+            input {
+                width: 100%;
+                outline: none;
+                border: 1px solid rgb(161, 159, 159);
+                box-sizing: border-box;
+                border-radius: 8px;
+                padding: 10px 12px;
+                margin-bottom: 14px;
+                &:focus {
+                    border: 1px solid $colorAccent;
+                }
+            }
+            textarea {
+                width: 100%;
+                min-height: 160px;
+                box-sizing: border-box;
+                outline: none;
+                border: 1px solid transparent;
+                padding: 10px 12px;
+                border-radius: 8px;
+                background-color: rgb(241, 255, 253);
+                &:focus {
+                    border: 1px solid $colorAccent;
+                }
+            }
+            button {
+                margin-top: 14px;
+                border: none;
+                padding: 10px 14px;
+                font-size: 0.95rem;
+                background-color: $colorAccent;
+                border-radius: 12px;
+                color: $colorOnAccent;
+                font-weight: 600;
+                &:hover {
+                    background-color: $colorAccentHover;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@import "../pages/variables.scss";
+
+body {
+  margin: 0;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  background-color: $colorPrimaryLight;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  width: 100%;
+  text-align: center;
+  color: $colorOnPrimary;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
