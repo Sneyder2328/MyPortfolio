@@ -1,25 +1,22 @@
 $radius: 15px;
+// $radius: 15px;
 //$navbarHeight: 48px;
 
-$btnColor: #5aa6fb;
-$btnColorOpaque: #91d1f8;
-$btnHoveredColor: #2c80d0;
-
 $main-width-page: 1100px;
-$secondary-section_width: 290px;
-$max-width-container: $secondary-section_width*2 + $main-width-page + 20;
-$interactColor: #8ce9fa;
-$interactHoveredColor: #469efa;
 
 $colorPrimaryDark: #02044A;
-$colorOnPrimaryDark1: rgb(221, 221, 221);
-$colorOnPrimaryDark2: #FFF;
+$colorOnPrimaryDark1: #ddebea;
+$colorOnPrimaryDark2: #3ed7eb;
 $colorOnPrimaryDark3: #00acc7;
 
 // $colorPrimary: #ebedee;
 // $colorPrimary: #02044A;
 $colorPrimary: #024179;
-$colorPrimaryLight: #7AA5CD;
+// $colorPrimary: #02044A;
+// $colorPrimary: #039da8;
+// $colorPrimaryLight: #7AA5CD;
+// $colorPrimaryLight: #1d85ca;
+$colorPrimaryLight: #7aa5cd;
 // $colorPrimaryLight: #0769b4;
 // $colorPrimaryLight: #054a8b;
 $colorOnPrimary: rgb(255, 255, 255);
@@ -27,10 +24,12 @@ $colorOnPrimary: rgb(255, 255, 255);
 
 
 // $colorSecondary: rgb(4, 76, 124);
-$colorSecondary: #023f79;
+$colorSecondary: #02044A;
 $colorOnSecondary: #ffffff;
 
-$colorAccent: #54c2df;
+$colorAccent: #04dbcd;
+// $colorAccent: #54c2df;
 // $colorAccent: #07dbbffa;
 $colorAccentHover: #10fcdcfa;
 $colorOnAccent: #ffffff;
+// $colorOnAccent: #ffffff;

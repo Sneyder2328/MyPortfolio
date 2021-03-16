@@ -31,16 +31,22 @@ export const Contact = () => {
                         </div>
                     </div>
                     <div className={styles.socialLinks}>
-                        <FontAwesomeIcon icon={faLinkedin} size="2x" color={"#FFF"} />
-                        <FontAwesomeIcon icon={faGithubSquare} size="2x" color={"#FFF"} />
-                        <FontAwesomeIcon icon={faTwitterSquare} size="2x" color={"#FFF"} />
+                        <span>
+                            <FontAwesomeIcon icon={faLinkedinIn} size="2x" color={"#FFF"} />
+                        </span>
+                        <span>
+                            <FontAwesomeIcon icon={faGithub} size="2x" color={"#FFF"} />
+                        </span>
+                        <span>
+                            <FontAwesomeIcon icon={faTwitter} size="2x" color={"#FFF"} />
+                        </span>
                     </div>
                 </div>
                 <div className={styles.form}>
                     <input placeholder="Name" />
                     <input placeholder="Email" />
                     <textarea placeholder="Message" />
-                    <button>Send Message</button>
+                    <button className="button">Send Message</button>
                 </div>
             </div>
         </section>

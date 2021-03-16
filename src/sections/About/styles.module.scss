@@ -1,0 +1,42 @@
+@import "../../pages/variables.scss";
+
+.aboutWrapper {
+    .about {
+        padding: 40px;
+        margin: 40px auto;
+        box-sizing: border-box;
+        width: $main-width-page;
+        border-radius: $radius;
+        background-color: $colorPrimary;
+        display: flex;
+        gap: 40px;
+
+        img {
+            border-radius: 50%;
+            width: 20%;
+        }
+        .info {
+            width: 38%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            p {
+                color: $colorOnPrimaryDark1;
+                line-height: 1.5;
+                letter-spacing: 0.7px;
+                font-size: 0.95rem;
+            }
+            button {
+                align-self: flex-end;
+            }
+        }
+        .skills {
+            h4 {
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: #fff;
+            }
+        }
+    }
+}

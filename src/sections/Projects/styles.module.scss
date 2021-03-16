@@ -54,8 +54,10 @@
         }
         .date {
             margin-top: 10px;
-            color: $colorOnPrimaryDark2;
-
+            color: $colorOnPrimaryDark1;
+            * {
+                color: $colorOnPrimaryDark1;
+            }
             span {
                 margin-left: 6px;
             }
@@ -70,19 +72,11 @@
 
             .button {
                 text-decoration: none;
-                background-color: $colorAccent;
-                border-radius: 12px;
-                padding: 10px 10px;
                 text-align: center;
-                font-weight: 600;
                 font-size: 0.8rem;
                 letter-spacing: 2px;
                 box-sizing: border-box;
                 width: 48%;
-                color: $colorOnAccent;
-                &:hover{
-                    background-color: $colorAccentHover;
-                }
             }
         }
     }

@@ -22,12 +22,13 @@
             justify-content: space-between;
 
             h4 {
-                font-size: 1.4rem;
+                font-size: 1.55rem;
                 font-weight: 500;
-                letter-spacing: 1.5px;
+                letter-spacing: 1.3px;
             }
             p {
                 margin-top: 10px;
+                color: $colorOnPrimaryDark1;
             }
             .mediums {
                 display: flex;
@@ -38,6 +39,7 @@
                     margin: 6px 0;
 
                     span {
+                        color: $colorOnPrimaryDark1;
                         margin-left: 10px;
                     }
                 }
@@ -45,12 +47,23 @@
             .socialLinks {
                 display: flex;
                 align-items: flex-end;
-                * {
-                    margin-right: 16px;
+                span {
+                    margin-right: 12px;
+                    background-color: $colorOnPrimaryDark1;
+                    padding: 8px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    * {
+                        width: 25px;
+                        height: 25px;
+                        color: $colorPrimaryDark;
+                    }
 
                     &:hover {
                         cursor: pointer;
-                        color: $colorAccent;
+                        background-color: $colorAccent;
                     }
                 }
             }
@@ -89,17 +102,6 @@
             }
             button {
                 margin-top: 14px;
-                border: none;
-                padding: 10px 14px;
-                font-size: 0.95rem;
-                background-color: $colorAccent;
-                border-radius: 12px;
-                color: $colorOnAccent;
-                font-weight: 600;
-                &:hover {
-                    background-color: $colorAccentHover;
-                    cursor: pointer;
-                }
             }
         }
     }

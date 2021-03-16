@@ -4,7 +4,6 @@ import {
     faCalendarAlt
 } from '@fortawesome/free-solid-svg-icons'
 import * as styles from './styles.module.scss'
-import { GatsbyImage } from "gatsby-plugin-image"
 import LSNImg1 from "../../images/lsn1.jpg"
 import frapp1 from "../../images/frapp1.jpg"
 import cryptotracker1 from "../../images/cryptotracker1.png"
@@ -115,7 +114,7 @@ const labelButton = {
 }
 const Button: React.FC<{ type: "web" | "googlePlay" | "github"; url: string }> = ({ type, url }) => {
     return (
-        <a className={styles.button} href={url} target="_blank">
+        <a className={styles.button + " button"} href={url} target="_blank">
             {labelButton[type]}
         </a>
     )
