@@ -40,7 +40,7 @@
             top: 60px;
 
             li {
-                margin: 20px 40px;
+                margin: 25px 20px;
                 opacity: 0;
                 a {
                     text-decoration: none;
@@ -60,7 +60,7 @@
             &.navActive {
                 max-height: 100vh;
                 li {
-                    animation: 0.27s ease 0.242857s 1 normal forwards running navLinkFade;
+                    animation: 0.24s ease 0.172857s 1 normal forwards running navLinkFade;
                 }
             }
         }

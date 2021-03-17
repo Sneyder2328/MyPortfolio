@@ -5,7 +5,7 @@
     margin: 0 auto;
 
     .about {
-        padding: 40px;
+        padding: 30px;
         margin: 40px auto;
         box-sizing: border-box;
         width: 100%;
@@ -76,6 +76,7 @@
         max-width: $medium-width-page;
         .about {
             flex-wrap: nowrap;
+            padding: 40px;
 
             .info {
                 width: 40%;
