@@ -16,10 +16,14 @@
         align-items: center;
 
         .title {
-            font-weight: 600;
+            font-weight: 400;
             color: #fff;
             font-size: 1.3rem;
             letter-spacing: 3px;
+
+            & b {
+                font-weight: 700;
+            }
             // margin-left: 40px;
         }
 
@@ -129,7 +133,6 @@
         max-width: 77%;
     }
 }
-
 
 @keyframes navLinkFade {
     from {

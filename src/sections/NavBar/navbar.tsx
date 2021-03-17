@@ -9,7 +9,7 @@ export const NavBar = () => {
   return (
     <header className={styles.navbarWrapper}>
       <div className={styles.navbar}>
-        <h2 className={styles.title}>Sneyder Angulo</h2>
+        <h2 className={styles.title}><b>Sneyder</b> Angulo</h2>
         <ul className={classNames(styles.navLinks,
           { [styles.navActive]: navActive })} >
           <li><a href="#projects">Work</a></li>

@@ -10,7 +10,7 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: linear-gradient(rgba(3, 164, 212, 0.267), #0238755d),
+    background-image: linear-gradient(rgba(4, 104, 134, 0.267), #002a5a5d),
         url("./../../images/coding-bg.jpg");
     display: flex;
 
@@ -41,13 +41,25 @@
     }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: $medium-width) {
     .home .content {
         .title {
             font-size: 2.7rem;
         }
         .desc {
             font-size: 2.2rem;
+        }
+    }
+}
+
+
+@media (min-width: $large-width) {
+    .home .content {
+        .title {
+            font-size: 2.95rem;
+        }
+        .desc {
+            font-size: 2.45rem;
         }
     }
 }
