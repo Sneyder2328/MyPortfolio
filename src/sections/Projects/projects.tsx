@@ -124,7 +124,7 @@ const labelButton = {
 }
 const Button: React.FC<{ type: "web" | "googlePlay" | "github"; url: string }> = ({ type, url }) => {
     return (
-        <a className={styles.button + " button"} href={url} target="_blank">
+        <a className={styles.button + " button"} href={url} target="_blank" rel="noopener">
             {labelButton[type]}
         </a>
     )

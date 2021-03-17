@@ -19,6 +19,7 @@ body {
 
 .button {
   background-color: $colorAccent;
+  transition: all 0.17s ease-in-out;
   border-radius: 12px;
   font-weight: 600;
   color: $colorOnAccent;

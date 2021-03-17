@@ -18,9 +18,9 @@ export const About = () => {
                 <div className={styles.info}>
                     <p>
                         Informatics engineering student based in Venezuela.
-                        Started coding since high school because wanted to be a hacker, now I´m mostly focused on Web and Mobile apps, overall, a passionate products builder and lifelong learner.
+                        Started coding since high school because wanted to be a hacker, now mostly focused on Web and Mobile apps, overall, a passionate products builder and lifelong learner.
                     </p>
-                    <a href="CurriculumVitae.pdf" target="_blank">
+                    <a href="CurriculumVitae.pdf" target="_blank" rel="noopener">
                         <button className="button">View CV</button>
                     </a>
                 </div>

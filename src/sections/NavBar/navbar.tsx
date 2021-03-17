@@ -13,7 +13,7 @@ export const NavBar = () => {
         <ul className={classNames(styles.navLinks,
           { [styles.navActive]: navActive })} >
           <li><a href="#projects">Work</a></li>
-          <li><a href="https://medium.com/@sneyderangulo" target="_blank">Blog</a></li>
+          <li><a href="https://medium.com/@sneyderangulo" target="_blank" rel="noopener">Blog</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
