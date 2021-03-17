@@ -67,7 +67,7 @@ const projects: Array<ProjectProps> = [
         date: "2021",
         description: "Personal porfolio website fully designed abd built from scratch while learning Gatsby framework",
         tags: ["React", "Sass", "Gatsby"],
-        website: "sneyder.net",
+        website: "/",
         githubRepo: "https://github.com/Sneyder2328/MyPorfolio",
         images: [portfolio],
         category: "web"
