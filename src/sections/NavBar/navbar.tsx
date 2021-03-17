@@ -14,7 +14,7 @@ export const NavBar = () => {
           { [styles.navActive]: navActive })} >
           <li><a href="#projects">Work</a></li>
           <li><a href="https://medium.com/@sneyderangulo" target="_blank">Blog</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <div className={classNames(styles.burger,

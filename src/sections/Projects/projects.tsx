@@ -25,28 +25,28 @@ const projects: Array<ProjectProps> = [
     {
         title: "LaSocialNetwork",
         date: "2020",
-        description: "LaSocialNetwork is a new social netword designed and built from scratch as a side project in order to practice full stack web development.",
-        tags: ["React", "Nodejs", "Express"],
+        description: "Social netword designed and built from scratch as a side project in order to practice full stack web development.",
+        tags: ["React", "Nodejs", "Express", "Socket.io"],
         website: "https://sneyder-lsn.netlify.app/",
-        githubRepo: "https://github.com/Sneyder2328/FundingRatesForBinanceApp",
+        githubRepo: "https://github.com/Sneyder2328/LaSocialNetwork",
         images: [LSNImg1],
         category: "web"
     },
     {
         title: "Funding rates for Binance",
         date: "2021",
-        description: "LaSocialNetwork is a new social netword designed and built from scratch as a side project in order to practice full stack web development.",
+        description: "",
         tags: ["Kotlin", "MVVM", "Firebase firestore"],
         googlePlay: "https://play.google.com/store/apps/details?id=com.sneyder.fundingrates",
-        githubRepo: "https://github.com/Sneyder2328/LaSocialNetwork",
+        githubRepo: "https://github.com/Sneyder2328/FundingRatesForBinanceApp",
         images: [frapp1],
         category: "android"
     },
     {
         title: "CryptoTracker",
         date: "2018",
-        description: "LaSocialNetwork is a new social netword designed and built from scratch as a side project in order to practice full stack web development.",
-        tags: ["Kotlin", "MVVM", "Firebase firestore"],
+        description: "Cryptocurrencies tracker project with alert price notifications included.",
+        tags: ["Kotlin", "MVVM", "FCM", "Room", "Retrofit"],
         googlePlay: "https://play.google.com/store/apps/details?id=com.sneyder.cryptotracker",
         githubRepo: "https://github.com/Sneyder2328/CryptoTracker",
         images: [cryptotracker1],
@@ -55,18 +55,27 @@ const projects: Array<ProjectProps> = [
     {
         title: "BarcaFansClub",
         date: "2018",
-        description: "LaSocialNetwork is a new social netword designed and built from scratch as a side project in order to practice full stack web development.",
-        tags: ["Kotlin", "MVVM", "Firebase firestore"],
-        googlePlay: "https://play.google.com/store/apps/details?id=com.sneyder.cryptotracker",
-        githubRepo: "https://github.com/Sneyder2328/CryptoTracker",
+        description: "Social network designed around the FC Barcelona fans theming, with integrated News and La Liga´s table sections.",
+        tags: ["Kotlin", "Firebase messaging", "DynamoDB"],
+        githubRepo: "https://github.com/Sneyder2328/BarcaFansClub",
         images: [barcafansclub1],
         category: "android"
+    },
+    {
+        title: "Portfolio Website",
+        date: "2021",
+        description: "Personal porfolio website fully designed abd built from scratch while learning Gatsby framework",
+        tags: ["React", "Sass", "Gatsby"],
+        website: "sneyder.net",
+        githubRepo: "https://github.com/Sneyder2328/MyPorfolio",
+        images: [barcafansclub1],
+        category: "web"
     }
 ]
 
 export const Projects = () => {
     return (
-        <section className={styles.projects}>
+        <section id="projects" className={styles.projects}>
             <h3 className={"section-title"}>These are some of my projects</h3>
             <div className={styles.items}>
                 {projects.map((project) => (<Project project={project} />))}
@@ -77,7 +86,7 @@ export const Projects = () => {
 
 const Project: React.FC<{ project: ProjectProps }> = ({ project }) => {
     return (
-        <div id="projects" className={styles.project}>
+        <div className={styles.project}>
             <img src={project.images[0]} />
             <div className={styles.content}>
                 <h5 className={styles.title}>{project.title}</h5>

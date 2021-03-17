@@ -11,12 +11,13 @@
         margin-top: 40px;
         display: flex;
         flex-wrap: wrap;
-        gap: 30px;
+        box-sizing: border-box;
 
         .info {
             box-sizing: border-box;
             color: $colorOnPrimaryDark2;
-            width: 48.5%;
+            width: 100%;
+            min-height: 240px;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -47,8 +48,8 @@
             .socialLinks {
                 display: flex;
                 align-items: flex-end;
-                span {
-                    margin-right: 12px;
+                a {
+                    margin-right: 16px;
                     background-color: $colorOnPrimaryDark1;
                     padding: 8px;
                     border-radius: 50%;
@@ -69,7 +70,8 @@
             }
         }
         .form {
-            width: 48.5%;
+            width: 100%;
+            margin-top: 30px;
             box-sizing: border-box;
             background-color: #fff;
             border-radius: $radius;
@@ -104,5 +106,41 @@
                 margin-top: 14px;
             }
         }
+    }
+}
+
+@media (min-width: $small-width) {
+    .contactWrapper {
+        max-width: $small-width-page;
+    }
+}
+
+@media (min-width: $medium-width) {
+    .contactWrapper {
+        max-width: $medium-width-page;
+
+        .contact {
+            .info {
+                width: 50%;
+                padding-right: 30px;
+            }
+
+            .form {
+                margin-top: 0;
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media (min-width: $large-width) {
+    .contactWrapper {
+        max-width: $large-width-page;
+    }
+}
+
+@media (min-width: $xlarge-width) {
+    .contactWrapper {
+        max-width: $xlarge-width-page;
     }
 }

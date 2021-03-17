@@ -31,15 +31,15 @@ export const Contact = () => {
                         </div>
                     </div>
                     <div className={styles.socialLinks}>
-                        <span>
+                        <a href="https://www.linkedin.com/in/sneyder-angulo/" target="_blank">
                             <FontAwesomeIcon icon={faLinkedinIn} size="2x" color={"#FFF"} />
-                        </span>
-                        <span>
+                        </a>
+                        <a href="https://github.com/Sneyder2328" target="_blank">
                             <FontAwesomeIcon icon={faGithub} size="2x" color={"#FFF"} />
-                        </span>
-                        <span>
+                        </a>
+                        <a href="https://twitter.com/SneyderHack" target="_blank">
                             <FontAwesomeIcon icon={faTwitter} size="2x" color={"#FFF"} />
-                        </span>
+                        </a>
                     </div>
                 </div>
                 <div className={styles.form}>

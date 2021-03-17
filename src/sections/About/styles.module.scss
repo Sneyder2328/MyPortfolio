@@ -1,22 +1,29 @@
 @import "../../pages/variables.scss";
 
 .aboutWrapper {
+    max-width: $main-width-page;
+    margin: 0 auto;
+
     .about {
         padding: 40px;
         margin: 40px auto;
         box-sizing: border-box;
-        width: $main-width-page;
+        width: 100%;
         border-radius: $radius;
         background-color: $colorPrimary;
         display: flex;
-        gap: 40px;
+        flex-wrap: wrap;
 
-        img {
+        .avatar {
             border-radius: 50%;
             width: 20%;
+            height: fit-content;
         }
+
         .info {
-            width: 38%;
+            width: 80%;
+            box-sizing: border-box;
+            padding-left: 30px;
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
@@ -25,18 +32,83 @@
                 color: $colorOnPrimaryDark1;
                 line-height: 1.5;
                 letter-spacing: 0.7px;
-                font-size: 0.95rem;
+                font-size: 0.9rem;
             }
             button {
+                margin-top: 16px;
                 align-self: flex-end;
             }
         }
         .skills {
+            width: 100%;
+            text-align: center;
+            box-sizing: border-box;
+
             h4 {
+                margin-top: 30px;
                 font-size: 1.5rem;
                 font-weight: 600;
                 color: #fff;
             }
+            div {
+                margin-top: 20px;
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                img {
+                    height: 30px;
+                }
+            }
         }
+    }
+}
+
+@media (min-width: $small-width) {
+    .aboutWrapper {
+        max-width: $small-width-page;
+    }
+}
+
+@media (min-width: $medium-width) {
+    .aboutWrapper {
+        max-width: $medium-width-page;
+        .about {
+            flex-wrap: nowrap;
+
+            .info {
+                width: 40%;
+            }
+            .skills {
+                width: 40%;
+                padding-left: 20px;
+                text-align: start;
+
+                h4 {
+                    margin-top: 0;
+                }
+
+                div {
+                    justify-content: flex-start;
+
+                    img {
+                        height: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $large-width) {
+    .aboutWrapper {
+        max-width: $large-width-page;
+    }
+}
+
+@media (min-width: $xlarge-width) {
+    .aboutWrapper {
+        max-width: $xlarge-width-page;
     }
 }
