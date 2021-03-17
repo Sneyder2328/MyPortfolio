@@ -91,7 +91,7 @@
             }
             textarea {
                 width: 100%;
-                min-height: 160px;
+                min-height: 100px;
                 box-sizing: border-box;
                 outline: none;
                 border: 1px solid rgb(216, 215, 215);
@@ -132,6 +132,10 @@
                 margin-top: 0;
                 width: 50%;
                 padding: 30px;
+
+                textarea {
+                    min-height: 160px;
+                }
 
                 button {
                     width: fit-content;

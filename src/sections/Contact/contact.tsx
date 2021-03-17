@@ -1,4 +1,5 @@
 import React from "react"
+import { useForm, ValidationError } from '@formspree/react';
 import {
     faPhoneAlt, faEnvelope
 } from '@fortawesome/free-solid-svg-icons'
@@ -9,6 +10,14 @@ import * as styles from './styles.module.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export const Contact = () => {
+    const [state, handleSubmit] = useForm("mgepgjea");
+    if (state.succeeded) {
+        return (
+            <section id="contact" className={styles.contactWrapper}>
+                <p>Thanks for joining!</p>;
+            </section>)
+    }
+
     return (
         <section id="contact" className={styles.contactWrapper}>
             <h3 className="section-title">Contact me</h3>
@@ -42,12 +51,13 @@ export const Contact = () => {
                         </a>
                     </div>
                 </div>
-                <div className={styles.form}>
-                    <input placeholder="Name" />
-                    <input placeholder="Email" />
-                    <textarea placeholder="Message" />
-                    <button className="button">Send Message</button>
-                </div>
+                <form className={styles.form} onSubmit={handleSubmit}>
+                    <input placeholder="Name" name="name"/>
+                    <input placeholder="Email" type="email" name="_replyto" />
+                    <input type="text" name="_gotcha" style={{display:"none"}} />
+                    <textarea placeholder="Message" name="message" />
+                    <button className="button" type="submit" disabled={state.submitting}>Send Message</button>
+                </form>
             </div>
         </section>
     )

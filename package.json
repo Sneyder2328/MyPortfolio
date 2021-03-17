@@ -6,6 +6,7 @@
   "author": "Sneyder Angulo <sneyder2328@gmail.com>",
   "dependencies": {
     "@fontsource/roboto": "^4.2.2",
+    "@formspree/react": "^2.2.3",
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-brands-svg-icons": "^5.15.2",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
