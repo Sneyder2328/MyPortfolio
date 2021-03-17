@@ -57,8 +57,8 @@
                     justify-content: center;
                     align-items: center;
                     * {
-                        width: 25px;
-                        height: 25px;
+                        width: 24px;
+                        height: 24px;
                         color: $colorPrimaryDark;
                     }
 
@@ -80,7 +80,7 @@
             input {
                 width: 100%;
                 outline: none;
-                border: 1px solid rgb(161, 159, 159);
+                border: 1px solid rgb(216, 215, 215);
                 box-sizing: border-box;
                 border-radius: 8px;
                 padding: 10px 12px;
@@ -94,10 +94,10 @@
                 min-height: 160px;
                 box-sizing: border-box;
                 outline: none;
-                border: 1px solid transparent;
+                border: 1px solid rgb(216, 215, 215);
                 padding: 10px 12px;
                 border-radius: 8px;
-                background-color: rgb(241, 255, 253);
+                // background-color: rgb(241, 255, 253);
                 &:focus {
                     border: 1px solid $colorAccent;
                 }
