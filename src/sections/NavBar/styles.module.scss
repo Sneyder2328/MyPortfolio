@@ -8,6 +8,8 @@
     background-color: $colorPrimaryDark;
 
     .navbar {
+        width: $main-width-page;
+        margin: 0 auto;
         height: 100%;
         display: flex;
         justify-content: space-between;
@@ -18,14 +20,16 @@
             color: #fff;
             font-size: 1.3rem;
             letter-spacing: 3px;
-            margin-left: 40px;
+            // margin-left: 40px;
         }
 
         .navLinks {
             width: 100%;
+            left: 0;
+            right: 0;
             max-height: 0;
             background-color: $colorPrimaryDark;
-            transition: max-height 0.6s linear;
+            transition: max-height 0.35s linear;
             position: absolute;
             display: block;
             position: absolute;
@@ -52,20 +56,20 @@
             &.navActive {
                 max-height: 100vh;
                 li {
-                    animation: 0.5s ease 0.392857s 1 normal forwards running navLinkFade;
+                    animation: 0.27s ease 0.242857s 1 normal forwards running navLinkFade;
                 }
             }
         }
         .burger {
             display: block;
-            margin-right: 40px;
+            // margin-right: 40px;
 
             div {
                 width: 25px;
                 height: 3px;
                 background-color: #eaeaea;
                 margin: 5px;
-                transition: all 0.5s ease;
+                transition: all 0.35s ease;
             }
 
             &.navActive {
@@ -83,15 +87,15 @@
     }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: $medium-width) {
     .navbarWrapper .navbar {
-        max-width: $main-width-page;
+        max-width: $medium-width-page;
         height: 100%;
         margin: auto;
 
         .title {
             font-size: 1.5rem;
-            margin: 0;
+            // margin: 0;
         }
 
         .navLinks {
@@ -113,6 +117,19 @@
         }
     }
 }
+
+@media (min-width: $large-width) {
+    .navbarWrapper .navbar {
+        max-width: $large-width-page;
+    }
+}
+
+@media (min-width: $xlarge-width) {
+    .navbarWrapper .navbar {
+        max-width: $xlarge-width-page;
+    }
+}
+
 
 @keyframes navLinkFade {
     from {

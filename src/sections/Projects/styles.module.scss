@@ -1,7 +1,8 @@
 @import "../../pages/variables.scss";
 
 .projects {
-    width: 100%;
+    max-width: $main-width-page;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -95,11 +96,9 @@
     }
 }
 
-
 @media (min-width: $small-width) {
     .projects {
         width: $small-width-page;
-        margin: 0 auto;
     }
 }
 
@@ -107,8 +106,15 @@
     .projects {
         width: $medium-width-page;
 
+        .items {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 30px;
+            grid-row-gap: 30px;
+        }
+
         .project {
-            width: 45%;
+            width: 100%;
         }
     }
 }
@@ -117,8 +123,10 @@
     .projects {
         width: $large-width-page;
 
-        .project {
-            width: 30%;
+        .items {
+            grid-template-columns: repeat(3, 1fr);
+            grid-column-gap: 40px;
+            grid-row-gap: 40px;
         }
     }
 }
@@ -128,4 +136,3 @@
         width: $xlarge-width-page;
     }
 }
-

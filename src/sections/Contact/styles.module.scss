@@ -136,6 +136,12 @@
 @media (min-width: $large-width) {
     .contactWrapper {
         max-width: $large-width-page;
+
+        .contact {
+            .info {
+                padding-right: 40px;
+            }
+        }
     }
 }
 
