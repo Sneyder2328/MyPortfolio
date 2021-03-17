@@ -8,6 +8,7 @@ import LSNImg1 from "../../images/lsn1.jpg"
 import frapp1 from "../../images/frapp1.jpg"
 import cryptotracker1 from "../../images/cryptotracker1.png"
 import barcafansclub1 from "../../images/barcafansclub1.png"
+import portfolio from "../../images/screenshot_portfolio.png"
 
 type ProjectProps = {
     title: string;
@@ -68,7 +69,7 @@ const projects: Array<ProjectProps> = [
         tags: ["React", "Sass", "Gatsby"],
         website: "sneyder.net",
         githubRepo: "https://github.com/Sneyder2328/MyPorfolio",
-        images: [barcafansclub1],
+        images: [portfolio],
         category: "web"
     }
 ]
