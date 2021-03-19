@@ -6,6 +6,7 @@ import * as styles from './styles.module.scss'
 export const NavBar = () => {
   const [navActive, setNavActive] = useState(false)
   const [scrollY, setScrollY] = useState(0)
+  const [alpha, setAlpha] = useState(0.0)
 
   const updateNavBackground = () => {
     console.log("window.scrollY", window.scrollY);
@@ -14,11 +15,13 @@ export const NavBar = () => {
   useEffect(() => {
     updateNavBackground()
     window.addEventListener("scroll", updateNavBackground)
+    return () => window.removeEventListener("scroll", updateNavBackground)
   }, [])
+  useEffect(() => {
+    setAlpha(scrollY / window.innerHeight)
+  }, [scrollY])
+  // console.log("aplha=", alpha);
 
-  const alpha = scrollY / window.innerHeight;
-  console.log("aplha=", alpha);
-  
   const bgStyle = {
     backgroundColor: `rgba(2, 4, 74, ${alpha})`,
     boxShadow: alpha >= 1.0 ? "0px 4.5px 5px -4px rgba(77,77,77,1)" : "none"
