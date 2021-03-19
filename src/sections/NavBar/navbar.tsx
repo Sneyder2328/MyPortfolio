@@ -12,11 +12,16 @@ export const NavBar = () => {
     setScrollY(window.scrollY)
   }
   useEffect(() => {
+    updateNavBackground()
     window.addEventListener("scroll", updateNavBackground)
   }, [])
 
+  const alpha = scrollY / window.innerHeight;
+  console.log("aplha=", alpha);
+  
   const bgStyle = {
-    backgroundColor: `rgba(2, 4, 74, ${scrollY / 400})`
+    backgroundColor: `rgba(2, 4, 74, ${alpha})`,
+    boxShadow: alpha >= 1.0 ? "0px 4.5px 5px -4px rgba(77,77,77,1)" : "none"
   };
   return (
     <header className={styles.navbarWrapper} style={bgStyle}>

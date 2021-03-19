@@ -93,7 +93,7 @@
                 box-sizing: border-box;
                 border-radius: 8px;
                 padding: 10px 12px;
-                margin-bottom: 14px;
+                margin-bottom: 18px;
                 &:focus {
                     border: 1px solid $colorAccent;
                 }
@@ -106,13 +106,12 @@
                 border: 1px solid rgb(216, 215, 215);
                 padding: 10px 12px;
                 border-radius: 8px;
-                // background-color: rgb(241, 255, 253);
                 &:focus {
                     border: 1px solid $colorAccent;
                 }
             }
             button {
-                margin-top: 14px;
+                margin-top: 18px;
                 width: 100%;
             }
         }

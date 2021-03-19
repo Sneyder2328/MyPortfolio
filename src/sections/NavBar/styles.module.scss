@@ -140,7 +140,7 @@
 
 @media (min-width: $xlarge-width) {
     .navbarWrapper .navbar {
-        max-width: 77%;
+        width: $xlarge-width-page;
 
         .title {
             font-size: 1.55rem;

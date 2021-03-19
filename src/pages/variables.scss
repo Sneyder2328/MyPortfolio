@@ -1,11 +1,11 @@
-$radius: 10px;
-$radius-secondary: 8px;
+$radius: 8px;
+$radius-secondary: 5px;
 
 $main-width-page: 95%;
 $small-width-page: 80%;
 $medium-width-page: 720px;
-$large-width-page: 980px;
-$xlarge-width-page: 1150px;
+$large-width-page: 950px;
+$xlarge-width-page: 1120px;
 
 
 $small-width: 640px;
@@ -16,27 +16,38 @@ $xlarge-width: 1280px;
 
 $colorPrimaryDark: #02044a;
 $colorOnPrimaryDark1: #ddebea;
-$colorOnPrimaryDark2: #3ed7eb;
+$colorOnPrimaryDark2: #a4f1fc;
 $colorOnPrimaryDark3: #00acc7;
 
 // $colorPrimary: #ebedee;
 // $colorPrimary: #02044A;
-$colorPrimary: #024179;
+
+
+$colorPrimary: #02044a;
+// $colorPrimary: #024179;
+
+
 // $colorPrimary: #02044A;
 // $colorPrimary: #039da8;
 // $colorPrimaryLight: #7AA5CD;
 // $colorPrimaryLight: #1d85ca;
-$colorPrimaryLight: #7aa5cd;
+
+$colorPrimaryLight: #024179;
+
+// $colorPrimaryLight: #7aa5cd;
+
+
 // $colorPrimaryLight: #0769b4;
 // $colorPrimaryLight: #054a8b;
 $colorOnPrimary: rgb(255, 255, 255);
 // $colorOnPrimary: rgb(0, 119, 255);
 
 // $colorSecondary: rgb(4, 76, 124);
-$colorSecondary: #02044a;
+$colorSecondary: #08415C;
+// $colorSecondary: #02044a;
 $colorOnSecondary: #ffffff;
 
-$colorAccent: #04dbcd;
+$colorAccent: #10d4c7;
 // $colorAccent: #54c2df;
 // $colorAccent: #07dbbffa;
 $colorAccentHover: #10fcdcfa;
