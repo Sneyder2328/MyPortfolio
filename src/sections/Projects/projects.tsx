@@ -110,14 +110,16 @@ const Project: React.FC<{ project: ProjectProps }> = ({ project }) => {
         <div className={styles.project}>
             <img src={project.images[0]} />
             <div className={styles.content}>
-                <h5 className={styles.title}>{project.title}</h5>
-                <span className={styles.date}>
-                    <FontAwesomeIcon icon={faCalendarAlt} size="1x" color={"#FFF"} />
-                    <span>{project.date}</span>
-                </span>
-                <p className={styles.description}>{project.description}</p>
-                <div className={styles.tagsWrapper}>
-                    {project.tags.map((tag) => (<Tag tag={tag} key={tag} />))}
+                <div className={styles.topSection}>
+                    <h5 className={styles.title}>{project.title}</h5>
+                    <span className={styles.date}>
+                        <FontAwesomeIcon icon={faCalendarAlt} size="1x" color={"#FFF"} />
+                        <span>{project.date}</span>
+                    </span>
+                    <p className={styles.description}>{project.description}</p>
+                    <div className={styles.tagsWrapper}>
+                        {project.tags.map((tag) => (<Tag tag={tag} key={tag} />))}
+                    </div>
                 </div>
                 <div className={styles.buttonsWrapper}>
                     {project.website && <Button url={project.website} type="web" />}

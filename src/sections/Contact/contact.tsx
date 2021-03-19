@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export const Contact = () => {
     const [state, handleSubmit] = useForm("mgepgjea");
-    if (state.succeeded || true) {
+    if (state.succeeded) {
         return (
             <section id="contact" className={styles.contactWrapper}>
                 <div className={styles.contact}>

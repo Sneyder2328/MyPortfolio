@@ -9,6 +9,8 @@
     .navbar {
         width: $main-width-page;
         margin: 0 auto;
+        box-sizing: border-box;
+        padding: 0 10px;
         height: 100%;
         display: flex;
         justify-content: space-between;
@@ -23,7 +25,6 @@
             & b {
                 font-weight: 700;
             }
-            // margin-left: 40px;
         }
 
         .navLinks {
@@ -93,9 +94,16 @@
     }
 }
 
+@media (min-width: $small-width) {
+    .navbarWrapper .navbar {
+        width: $small-width-page;
+        padding: 0;
+    }
+}
+
 @media (min-width: $medium-width) {
     .navbarWrapper .navbar {
-        max-width: $medium-width-page;
+        width: $medium-width-page;
         height: 100%;
         margin: auto;
 
@@ -126,7 +134,7 @@
 
 @media (min-width: $large-width) {
     .navbarWrapper .navbar {
-        max-width: $large-width-page;
+        width: $large-width-page;
     }
 }
 

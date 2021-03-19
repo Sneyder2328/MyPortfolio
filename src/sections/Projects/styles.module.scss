@@ -27,11 +27,14 @@
     border-radius: $radius;
     box-sizing: border-box;
     width: 100%;
-    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
 
     img {
         width: 100%;
         aspect-ratio: 1.67;
+        max-height: 200px;
         object-fit: cover;
         object-position: center;
         border-top-left-radius: $radius;
@@ -42,6 +45,12 @@
         padding: 28px;
         display: flex;
         flex-wrap: wrap;
+        align-content: space-between;
+
+        .topSection {
+            display: flex;
+            flex-direction: column;
+        }
 
         .title {
             font-size: 1.2rem;
@@ -92,7 +101,7 @@
 
         .tag {
             background-color: $colorPrimaryLight;
-            border-radius: 12px;
+            border-radius: $radius-secondary;
             padding: 7px 10px;
             font-size: 0.9rem;
             color: $colorOnSecondary;
@@ -110,15 +119,19 @@
     .projects {
         width: $medium-width-page;
 
+        .project {
+            height: 100%;
+
+            .content {
+                height: 100%;
+            }
+        }
+
         .items {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-column-gap: 30px;
             grid-row-gap: 30px;
-        }
-
-        .project {
-            width: 100%;
         }
     }
 }
