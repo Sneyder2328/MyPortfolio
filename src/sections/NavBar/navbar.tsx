@@ -24,10 +24,10 @@ export const NavBar = () => {
 
   const bgStyle = {
     backgroundColor: `rgba(2, 4, 74, ${alpha})`,
-    boxShadow: alpha >= 1.0 ? "0px 4.5px 5px -4px rgba(77,77,77,1)" : "none"
+    // boxShadow: alpha >= 1.0 ? "0px 4.5px 5px -4px rgba(77,77,77,1)" : "none"
   };
   return (
-    <header className={styles.navbarWrapper} style={bgStyle}>
+    <header className={classNames(styles.navbarWrapper, {[styles.bordered]: alpha >= 1.0})} style={bgStyle}>
       <div className={styles.navbar}>
         <h2 className={styles.title}><b>Sneyder</b> Angulo</h2>
         <ul className={classNames(styles.navLinks,

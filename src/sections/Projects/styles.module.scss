@@ -130,8 +130,8 @@
         .items {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-column-gap: 22px;
-            grid-row-gap: 22px;
+            grid-column-gap: 18px;
+            grid-row-gap: 18px;
         }
     }
 }
@@ -142,8 +142,8 @@
 
         .items {
             grid-template-columns: repeat(3, 1fr);
-            grid-column-gap: 30px;
-            grid-row-gap: 30px;
+            grid-column-gap: 25px;
+            grid-row-gap: 25px;
         }
     }
 }
