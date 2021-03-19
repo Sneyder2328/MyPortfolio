@@ -14,7 +14,7 @@ export const About = () => {
         <section id={"about"} className={styles.aboutWrapper}>
             <h3 className="section-title">About</h3>
             <div className={styles.about}>
-                <img className={styles.avatar} src={photo} />
+                <img className={styles.avatar} src={photo} alt="Sneyder Angulo" />
                 <div className={styles.info}>
                     <p>
                         Informatics engineering student based in Venezuela.

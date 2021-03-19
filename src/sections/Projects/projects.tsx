@@ -9,6 +9,8 @@ import frapp1 from "../../images/frapp1.jpg"
 import cryptotracker1 from "../../images/cryptotracker1.png"
 import barcafansclub1 from "../../images/barcafansclub1.png"
 import portfolio from "../../images/screenshot_portfolio.png"
+import USConstitution from "../../images/screenshot_us_constitution.png"
+import TicTacToe from "../../images/screenshot_tic_tac_toe.png"
 
 type ProjectProps = {
     title: string;
@@ -26,7 +28,7 @@ const projects: Array<ProjectProps> = [
     {
         title: "LaSocialNetwork",
         date: "2020",
-        description: "Social netword designed and built from scratch as a side project in order to practice full stack web development.",
+        description: "Social network designed and built from scratch",
         tags: ["React", "Nodejs", "Express", "Socket.io"],
         website: "https://sneyder-lsn.netlify.app/",
         githubRepo: "https://github.com/Sneyder2328/LaSocialNetwork",
@@ -36,8 +38,8 @@ const projects: Array<ProjectProps> = [
     {
         title: "Funding rates for Binance",
         date: "2021",
-        description: "",
-        tags: ["Kotlin", "MVVM", "Firebase firestore"],
+        description: "The express server gathers every 8 hours the data from Binance´s Api, process it and stores it in Firebase firestore. The app takes care of displaying the data.",
+        tags: ["Kotlin", "MVVM", "Firebase firestore", "Nodejs", "Express"],
         googlePlay: "https://play.google.com/store/apps/details?id=com.sneyder.fundingrates",
         githubRepo: "https://github.com/Sneyder2328/FundingRatesForBinanceApp",
         images: [frapp1],
@@ -65,13 +67,31 @@ const projects: Array<ProjectProps> = [
     {
         title: "Portfolio Website",
         date: "2021",
-        description: "Personal porfolio website fully designed abd built from scratch while learning Gatsby framework",
+        description: "Personal porfolio website fully designed and built from scratch while learning Gatsby framework",
         tags: ["React", "Sass", "Gatsby"],
         website: "/",
         githubRepo: "https://github.com/Sneyder2328/MyPorfolio",
         images: [portfolio],
         category: "web"
-    }
+    },
+    {
+        title: "US Constitution App",
+        date: "2016",
+        description: "United States Constitution available as an app in an easy to read manner.",
+        tags: ["Java", "Web scrapper"],
+        googlePlay: "https://play.google.com/store/apps/details?id=com.twismart.usconstitution",
+        images: [USConstitution],
+        category: "android"
+    },
+    {
+        title: "Tic Tac Toe Game",
+        date: "2017",
+        description: "One of the most loved, classic games of all time perfectly recreated for your mobile.",
+        tags: ["Java"],
+        googlePlay: "https://play.google.com/store/apps/details?id=com.twismart.games.tictactoe",
+        images: [TicTacToe],
+        category: "android"
+    },
 ]
 
 export const Projects = () => {
@@ -79,7 +99,7 @@ export const Projects = () => {
         <section id="projects" className={styles.projects}>
             <h3 className={"section-title"}>These are some of my projects</h3>
             <div className={styles.items}>
-                {projects.map((project) => (<Project project={project} />))}
+                {projects.map((project) => (<Project project={project} key={project.title} />))}
             </div>
         </section>
     )
@@ -97,7 +117,7 @@ const Project: React.FC<{ project: ProjectProps }> = ({ project }) => {
                 </span>
                 <p className={styles.description}>{project.description}</p>
                 <div className={styles.tagsWrapper}>
-                    {project.tags.map((tag) => (<Tag tag={tag} />))}
+                    {project.tags.map((tag) => (<Tag tag={tag} key={tag} />))}
                 </div>
                 <div className={styles.buttonsWrapper}>
                     {project.website && <Button url={project.website} type="web" />}

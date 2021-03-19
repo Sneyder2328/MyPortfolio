@@ -1,17 +1,29 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 // import { Link } from "gatsby"
 import classNames from "classnames";
 import * as styles from './styles.module.scss'
 
 export const NavBar = () => {
   const [navActive, setNavActive] = useState(false)
+  const [scrollY, setScrollY] = useState(0)
 
+  const updateNavBackground = () => {
+    console.log("window.scrollY", window.scrollY);
+    setScrollY(window.scrollY)
+  }
+  useEffect(() => {
+    window.addEventListener("scroll", updateNavBackground)
+  }, [])
+
+  const bgStyle = {
+    backgroundColor: `rgba(2, 4, 74, ${scrollY / 400})`
+  };
   return (
-    <header className={styles.navbarWrapper}>
+    <header className={styles.navbarWrapper} style={bgStyle}>
       <div className={styles.navbar}>
         <h2 className={styles.title}><b>Sneyder</b> Angulo</h2>
         <ul className={classNames(styles.navLinks,
-          { [styles.navActive]: navActive })} >
+          { [styles.navActive]: navActive })}>
           <li><a href="#projects">Work</a></li>
           <li><a href="https://medium.com/@sneyderangulo" target="_blank" rel="noopener">Blog</a></li>
           <li><a href="#about">About</a></li>

@@ -11,10 +11,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export const Contact = () => {
     const [state, handleSubmit] = useForm("mgepgjea");
-    if (state.succeeded) {
+    if (state.succeeded || true) {
         return (
             <section id="contact" className={styles.contactWrapper}>
-                <p>Thanks for joining!</p>;
+                <div className={styles.contact}>
+                    <p className={styles.thanks}>Thanks for joining!</p>
+                </div>
             </section>)
     }
 
@@ -40,21 +42,21 @@ export const Contact = () => {
                         </div>
                     </div>
                     <div className={styles.socialLinks}>
-                        <a href="https://www.linkedin.com/in/sneyder-angulo/" target="_blank">
+                        <a href="https://www.linkedin.com/in/sneyder-angulo/" target="_blank" rel="noopener">
                             <FontAwesomeIcon icon={faLinkedinIn} size="2x" color={"#FFF"} />
                         </a>
-                        <a href="https://github.com/Sneyder2328" target="_blank">
+                        <a href="https://github.com/Sneyder2328" target="_blank" rel="noopener">
                             <FontAwesomeIcon icon={faGithub} size="2x" color={"#FFF"} />
                         </a>
-                        <a href="https://twitter.com/SneyderHack" target="_blank">
+                        <a href="https://twitter.com/SneyderHack" target="_blank" rel="noopener">
                             <FontAwesomeIcon icon={faTwitter} size="2x" color={"#FFF"} />
                         </a>
                     </div>
                 </div>
                 <form className={styles.form} onSubmit={handleSubmit}>
-                    <input placeholder="Name" name="name"/>
+                    <input placeholder="Name" name="name" />
                     <input placeholder="Email" type="email" name="_replyto" />
-                    <input type="text" name="_gotcha" style={{display:"none"}} />
+                    <input type="text" name="_gotcha" style={{ display: "none" }} />
                     <textarea placeholder="Message" name="message" />
                     <button className="button" type="submit" disabled={state.submitting}>Send Message</button>
                 </form>

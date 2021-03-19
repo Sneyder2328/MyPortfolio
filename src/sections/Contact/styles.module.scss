@@ -13,6 +13,14 @@
         flex-wrap: wrap;
         box-sizing: border-box;
 
+        .thanks {
+            width: 100%;
+            color: $colorOnPrimaryDark1;
+            font-size: 1.2rem;
+            letter-spacing: 0.7px;
+            text-align: center;
+        }
+
         .info {
             box-sizing: border-box;
             color: $colorOnPrimaryDark2;

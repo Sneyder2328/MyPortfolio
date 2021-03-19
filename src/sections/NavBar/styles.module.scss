@@ -5,7 +5,6 @@
     z-index: 10;
     width: 100%;
     height: 62px;
-    background-color: $colorPrimaryDark;
 
     .navbar {
         width: $main-width-page;
@@ -32,12 +31,12 @@
             left: 0;
             right: 0;
             max-height: 0;
-            background-color: $colorPrimaryDark;
             transition: max-height 0.35s linear;
             position: absolute;
             display: block;
             position: absolute;
             top: 60px;
+            background-color: rgba(2, 4, 74, 1);
 
             li {
                 margin: 25px 20px;
@@ -67,7 +66,6 @@
         }
         .burger {
             display: block;
-            // margin-right: 40px;
 
             div {
                 width: 25px;
@@ -75,6 +73,9 @@
                 background-color: #eaeaea;
                 margin: 5px;
                 transition: all 0.35s ease;
+            }
+            &:hover {
+                cursor: pointer;
             }
 
             &.navActive {
@@ -100,7 +101,6 @@
 
         .title {
             font-size: 1.5rem;
-            // margin: 0;
         }
 
         .navLinks {
@@ -109,6 +109,7 @@
             position: static;
             top: 0;
             max-height: none;
+            background-color: transparent;
 
             li {
                 opacity: 1;
@@ -132,6 +133,16 @@
 @media (min-width: $xlarge-width) {
     .navbarWrapper .navbar {
         max-width: 77%;
+
+        .title {
+            font-size: 1.55rem;
+        }
+        .navLinks li {
+            margin: 0 10px;
+            a {
+                font-size: 1.09rem;
+            }
+        }
     }
 }
 

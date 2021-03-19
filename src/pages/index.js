@@ -14,8 +14,8 @@ import { Footer } from "../sections/Footer/footer"
 
 const IndexPage = () => (
   <div>
+    <SEO title="Sneyder Angulo - Software developer" />
     <NavBar />
-    <SEO title="Sneyder Angulo - Software developer" description="Informatics engineering student based in Venezuela. Started coding since high school because wanted to be a hacker, now mostly focused on Web and Mobile apps, overall, a passionate products builder and lifelong learner."/>
     <Home />
     <Projects />
     <About />
