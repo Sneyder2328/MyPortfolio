@@ -1,21 +1,38 @@
-import React from "react"
-import { useForm, ValidationError } from '@formspree/react';
+import React, { useEffect } from "react"
+import { useForm } from '@formspree/react';
 import {
     faPhoneAlt, faEnvelope
 } from '@fortawesome/free-solid-svg-icons'
 import {
-    faTelegram, faLinkedin, faGithub, faTwitter, faLinkedinIn, faGithubSquare, faTwitterSquare
+    faTelegram, faGithub, faTwitter, faLinkedinIn
 } from '@fortawesome/free-brands-svg-icons'
 import * as styles from './styles.module.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { toast } from 'react-toastify';
 
 export const Contact = () => {
     const [state, handleSubmit] = useForm("mgepgjea");
+
+    useEffect(() => {
+        console.log("state.errors", state.errors);
+        if (state.errors?.[0]) {
+            toast.error(state.errors?.[0]?.message, {
+                position: "top-right",
+                autoClose: 4000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            })
+        }
+    }, [state.errors])
+
     if (state.succeeded) {
         return (
             <section id="contact" className={styles.contactWrapper}>
                 <div className={styles.contact}>
-                    <p className={styles.thanks}>Thanks for joining!</p>
+                    <p className={styles.thanks}>Thanks for contacting me!, Will reach out to you as soon as posible.</p>
                 </div>
             </section>)
     }
@@ -55,9 +72,9 @@ export const Contact = () => {
                 </div>
                 <form className={styles.form} onSubmit={handleSubmit}>
                     <input placeholder="Name" name="name" />
-                    <input placeholder="Email" type="email" name="_replyto" />
+                    <input placeholder="Email" type="email" name="_replyto" minLength={2} />
                     <input type="text" name="_gotcha" style={{ display: "none" }} />
-                    <textarea placeholder="Message" name="message" />
+                    <textarea placeholder="Message" name="message" minLength={2} />
                     <button className="button" type="submit" disabled={state.submitting}>Send Message</button>
                 </form>
             </div>

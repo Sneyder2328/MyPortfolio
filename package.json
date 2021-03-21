@@ -30,7 +30,8 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-toastify": "^7.0.3"
   },
   "devDependencies": {
     "@types/node": "^14.14.34",

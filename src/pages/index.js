@@ -11,6 +11,9 @@ import { About } from "../sections/About/about"
 import "./reset.css"
 import "./styles.scss"
 import { Footer } from "../sections/Footer/footer"
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const IndexPage = () => (
   <div>
@@ -21,6 +24,7 @@ const IndexPage = () => (
     <About />
     <Contact />
     <Footer />
+    <ToastContainer />
   </div>
 )
 
