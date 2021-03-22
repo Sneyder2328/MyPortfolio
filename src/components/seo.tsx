@@ -17,7 +17,6 @@ export const SEO = ({ lang, title, ...props }) => {
   }
   `)
   console.log("props in seo=", props);
-  const url = props.location.pathname;
   const metaDescription = data.site.siteMetadata.description
   const { siteUrl, author } = data.site.siteMetadata
 
@@ -46,7 +45,7 @@ export const SEO = ({ lang, title, ...props }) => {
             },
             {
               property: `og:url`,
-              content: `${siteUrl}${withPrefix(url)}`,
+              content: `${siteUrl}}`,
             },
             {
               property: `og:description`,
