@@ -50,7 +50,7 @@
                     transition: color 0.19s ease-in-out;
                     text-decoration: none;
                     color: $colorOnPrimaryDark1;
-                    letter-spacing: 2px;
+                    letter-spacing: 1px;
                     font-size: 1rem;
                     font-weight: 500;
 
@@ -69,6 +69,7 @@
         }
         .burger {
             display: block;
+            margin-left: 16px;
 
             div {
                 width: 25px;

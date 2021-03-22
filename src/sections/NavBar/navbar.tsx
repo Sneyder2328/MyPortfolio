@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-// import { Link } from "gatsby"
 import classNames from "classnames";
 import * as styles from './styles.module.scss'
+import { LanguagePicker } from "./LanguagePicker/languagePicker";
+import { FormattedMessage } from "react-intl";
 
 export const NavBar = () => {
   const [navActive, setNavActive] = useState(false)
@@ -9,34 +10,58 @@ export const NavBar = () => {
   const [alpha, setAlpha] = useState(0.0)
 
   const updateNavBackground = () => {
-    console.log("window.scrollY", window.scrollY);
     setScrollY(window.scrollY)
   }
+
   useEffect(() => {
     updateNavBackground()
     window.addEventListener("scroll", updateNavBackground)
     return () => window.removeEventListener("scroll", updateNavBackground)
   }, [])
+
   useEffect(() => {
     setAlpha(scrollY / window.innerHeight)
   }, [scrollY])
-  // console.log("aplha=", alpha);
 
   const bgStyle = {
-    backgroundColor: `rgba(2, 4, 74, ${alpha})`,
-    // boxShadow: alpha >= 1.0 ? "0px 4.5px 5px -4px rgba(77,77,77,1)" : "none"
+    backgroundColor: `rgba(2, 4, 74, ${alpha})`
   };
   return (
-    <header className={classNames(styles.navbarWrapper, {[styles.bordered]: alpha >= 1.0})} style={bgStyle}>
+    <header className={classNames(styles.navbarWrapper, { [styles.bordered]: alpha >= 1.0 })} style={bgStyle}>
       <div className={styles.navbar}>
         <h2 className={styles.title}><b>Sneyder</b> Angulo</h2>
         <ul className={classNames(styles.navLinks,
           { [styles.navActive]: navActive })}>
-          <li><a href="#projects">Work</a></li>
-          <li><a href="https://medium.com/@sneyderangulo" target="_blank" rel="noopener">Blog</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <FormattedMessage id="header.projects">
+            {(txt) => (<li>
+              <a href="#projects">
+                {txt}
+              </a>
+            </li>)}
+          </FormattedMessage>
+          <FormattedMessage id="header.blog">
+            {(txt) => (<li>
+              <a href="https://medium.com/@sneyderangulo" target="_blank" rel="noopener">
+                {txt}
+              </a>
+            </li>)}
+          </FormattedMessage>
+          <FormattedMessage id="header.about">
+            {(txt) => (<li>
+              <a href="#about">
+                {txt}
+              </a>
+            </li>)}
+          </FormattedMessage>
+          <FormattedMessage id="header.contact">
+            {(txt) => (<li>
+              <a href="#contact">
+                {txt}
+              </a>
+            </li>)}
+          </FormattedMessage>
         </ul>
+        <LanguagePicker />
         <div className={classNames(styles.burger,
           { [styles.navActive]: navActive })} onClick={() => { setNavActive(!navActive) }}>
           <div className={styles.line1}></div>

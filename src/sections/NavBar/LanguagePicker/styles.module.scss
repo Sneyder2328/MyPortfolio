@@ -1,0 +1,34 @@
+@import "../../../pages/variables.scss";
+
+.languagePicker {
+    display: flex;
+    align-items: center;
+
+    .langLabel {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: $colorOnPrimaryDark1;
+        &:hover {
+            color: $colorOnPrimaryDark2;
+            cursor: pointer;
+        }
+    }
+    .separator {
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: $colorOnPrimaryDark1;
+        margin: 0 10px;
+    }
+}
+
+@media (min-width: $small-width) {
+}
+
+@media (min-width: $medium-width) {
+}
+
+@media (min-width: $large-width) {
+}
+
+@media (min-width: $xlarge-width) {
+}

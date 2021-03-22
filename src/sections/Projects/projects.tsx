@@ -11,6 +11,7 @@ import barcafansclub1 from "../../images/barcafansclub1.png"
 import portfolio from "../../images/screenshot_portfolio.png"
 import USConstitution from "../../images/screenshot_us_constitution.png"
 import TicTacToe from "../../images/screenshot_tic_tac_toe.png"
+import { FormattedMessage } from "react-intl"
 
 type ProjectProps = {
     title: string;
@@ -97,7 +98,11 @@ const projects: Array<ProjectProps> = [
 export const Projects = () => {
     return (
         <section id="projects" className={styles.projects}>
-            <h3 className={"section-title"}>These are some of my projects</h3>
+            <FormattedMessage id="projects.title">
+                {(txt) => (
+                    <h3 className={"section-title"}>{txt}</h3>
+                )}
+            </FormattedMessage>
             <div className={styles.items}>
                 {projects.map((project) => (<Project project={project} key={project.title} />))}
             </div>

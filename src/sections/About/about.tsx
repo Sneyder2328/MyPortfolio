@@ -8,24 +8,38 @@ import reactLogo from "../../images/react.svg"
 import androidLogo from "../../images/ic_android.svg"
 import gitLogo from "../../images/ic_git.svg"
 import firebaseLogo from "../../images/ic_firebase.svg"
+import { FormattedMessage } from "react-intl"
 
 export const About = () => {
     return (
         <section id={"about"} className={styles.aboutWrapper}>
-            <h3 className="section-title">About</h3>
+            <FormattedMessage id="about.title">
+                {(txt) => (
+                    <h3 className="section-title">{txt}</h3>
+                )}
+            </FormattedMessage>
             <div className={styles.about}>
                 <img className={styles.avatar} src={photo} alt="Sneyder Angulo" />
                 <div className={styles.info}>
-                    <p>
-                        Informatics engineering student based in Venezuela.
-                        Started coding since high school because wanted to be a hacker, now mostly focused on Web and Mobile apps, overall, a passionate products builder and lifelong learner.
-                    </p>
+                    <FormattedMessage id="about.bio">
+                        {(txt) => (
+                            <p>{txt}</p>
+                        )}
+                    </FormattedMessage>
                     <a href="CurriculumVitae.pdf" target="_blank" rel="noopener">
-                        <button className="button">View CV</button>
+                        <FormattedMessage id="about.view_cv">
+                            {(txt) => (
+                                <button className="button">{txt}</button>
+                            )}
+                        </FormattedMessage>
                     </a>
                 </div>
                 <div className={styles.skills}>
-                    <h4>Skills</h4>
+                    <FormattedMessage id="about.skills">
+                        {(txt) => (
+                            <h4>{txt}</h4>
+                        )}
+                    </FormattedMessage>
                     <div>
                         <img src={kotlinLogo} />
                         <img src={reactLogo} />

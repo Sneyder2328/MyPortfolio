@@ -1,8 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Sneyder Angulo - Software developer`,
+    siteUrl: 'https://sneyder.net/',
     description: `Personal website of Sneyder Thomas Angulo Soto, software developer based in Venezuela.`,
-    author: `@sneyderHack`,
+    author: {
+      name: "Sneyder Angulo",
+      twitter: `@sneyderHack`
+    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -20,13 +23,22 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Sneyder Angulo - Software developer`,
+        short_name: `Sneyder Angulo`,
         start_url: `/`,
         background_color: `#02044a`,
         theme_color: `#02044a`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-i18n',
+      options: {
+        langKeyForNull: 'en',
+        langKeyDefault: 'en',
+        useLangKeyLayout: true,
+        prefixDefault: false
       },
     },
     `gatsby-plugin-gatsby-cloud`,
