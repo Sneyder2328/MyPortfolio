@@ -38,3 +38,26 @@ a {
     background-color: $colorAccentHover;
   }
 }
+
+.fadeInUpBig {
+  animation-name: fadeInUpBig;
+}
+
+.animated {
+  opacity: 0;
+  animation-duration: 0.7s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeInUpBig {
+  0% {
+    opacity: 0;
+    transform: translateY(70vh)
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}

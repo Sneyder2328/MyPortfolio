@@ -9,10 +9,11 @@ import androidLogo from "../../images/ic_android.svg"
 import gitLogo from "../../images/ic_git.svg"
 import firebaseLogo from "../../images/ic_firebase.svg"
 import { FormattedMessage } from "react-intl"
+import { Section } from "../../components/UI/Section"
 
 export const About = ({langKey}) => {
     return (
-        <section id={"about"} className={styles.aboutWrapper}>
+        <Section id={"about"} className={styles.aboutWrapper} >
             <FormattedMessage id="about.title">
                 {(txt) => (
                     <h3 className="section-title">{txt}</h3>
@@ -51,6 +52,6 @@ export const About = ({langKey}) => {
                     </div>
                 </div>
             </div>
-        </section>
+        </Section>
     )
 }

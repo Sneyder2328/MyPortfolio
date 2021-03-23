@@ -10,6 +10,7 @@ import * as styles from './styles.module.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { toast } from 'react-toastify';
 import { FormattedMessage } from "react-intl";
+import { Section } from "../../components/UI/Section";
 
 export const Contact = () => {
     const [state, handleSubmit] = useForm("mgepgjea");
@@ -38,7 +39,7 @@ export const Contact = () => {
     }
 
     return (
-        <section id="contact" className={styles.contactWrapper}>
+        <Section id="contact" className={styles.contactWrapper}>
             <FormattedMessage id="contact.title">
                 {(txt) => (
                     <h3 className="section-title">{txt}</h3>
@@ -102,6 +103,6 @@ export const Contact = () => {
 
                 </form>
             </div>
-        </section>
+        </Section>
     )
 }

@@ -48,6 +48,11 @@
         padding-bottom: 8px;
         cursor: pointer;
 
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+        animation-name: bounce-1;
+        animation-timing-function: ease-in-out;
+
         span {
             color: $colorOnPrimaryDark1;
             font-size: 1.2rem;
@@ -55,6 +60,12 @@
             letter-spacing: 1.1px;
             margin-bottom: 6px;
         }
+    }
+
+    @keyframes bounce-1 {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-14px); }
+        100% { transform: translateY(0); }
     }
 }
 

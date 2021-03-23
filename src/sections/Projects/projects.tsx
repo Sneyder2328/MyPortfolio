@@ -7,6 +7,7 @@ import { useIntl } from 'react-intl'
 import * as styles from './styles.module.scss'
 import { FormattedMessage } from "react-intl"
 import { projects } from "../../data/messages/projects"
+import { Section } from "../../components/UI/Section"
 
 type ProjectProps = {
     title: string;
@@ -22,7 +23,7 @@ type ProjectProps = {
 
 export const Projects = ({ langKey }) => {
     return (
-        <section id="projects" className={styles.projects}>
+        <Section id="projects" className={styles.projects}>
             <FormattedMessage id="projects.title">
                 {(txt) => (
                     <h3 className={"section-title"}>{txt}</h3>
@@ -31,7 +32,7 @@ export const Projects = ({ langKey }) => {
             <div className={styles.items}>
                 {projects[langKey].map((project) => (<Project project={project} key={project.title} />))}
             </div>
-        </section>
+        </Section>
     )
 }
 

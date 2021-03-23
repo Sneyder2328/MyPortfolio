@@ -11,7 +11,7 @@ export const Home = () => {
     const intl = useIntl()
 
     return (
-        <section className={styles.home}>
+        <section id="home" className={styles.home}>
             <div className={styles.content}>
                 <h2 className={styles.title}>{intl.formatMessage({ id: "home.title" })}</h2>
                 <h3 className={styles.desc}>{intl.formatMessage({ id: "home.subTitle" })}</h3>

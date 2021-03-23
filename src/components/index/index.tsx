@@ -21,7 +21,6 @@ const messages = { en, es };
 
 export const Index = (props) => {
     const { langKey } = props.pageContext
-    console.log("index props", props);
 
     return (
         <IntlProvider locale={langKey} messages={messages[langKey]}>

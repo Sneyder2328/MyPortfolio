@@ -10,7 +10,7 @@ export const es = {
     "home.what_do": '¿Lo que hago?',
     "projects.title": 'Aca estan algunos de mis proyectos',
     "projects.see_live": "Visitar sitio",
-    "projects.github_repo": "Ver repositorio",
+    "projects.github_repo": "Github repo",
     "projects.get_app": "Obtener App",
     "about.title": "Sobre mi",
     "about.bio": "Estudiante de Ingenieria en informatica de Venezuela.",
