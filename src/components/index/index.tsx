@@ -14,23 +14,22 @@ import { About } from "../../sections/About/about"
 import { Contact } from "../../sections/Contact/contact"
 import { Footer } from "../../sections/Footer/footer"
 import { IntlProvider } from "react-intl"
-import {es} from "../../data/messages/es"
-import {en} from "../../data/messages/en"
+import { es } from "../../data/messages/es"
+import { en } from "../../data/messages/en"
 
 const messages = { en, es };
 
 export const Index = (props) => {
-    console.log("props", props);
     const { langKey } = props.pageContext
-    console.log("pageContext", langKey);
+    console.log("index props", props);
 
     return (
         <IntlProvider locale={langKey} messages={messages[langKey]}>
-            <SEO title="Sneyder Angulo - Software developer" lang={"en"} {...props} />
-            <NavBar />
+            <SEO lang={langKey} />
+            <NavBar langKey={langKey} />
             <Home />
-            <Projects />
-            <About />
+            <Projects langKey={langKey} />
+            <About langKey={langKey} />
             <Contact />
             <Footer />
             <ToastContainer />

@@ -1,9 +1,11 @@
 import * as React from "react"
 import { navigate } from 'gatsby'
 
-export default () => {
+const NotFoundPage = () => {
   React.useEffect(() => {
     navigate('/');
   }, []);
   return null;
 };
+
+export default NotFoundPage

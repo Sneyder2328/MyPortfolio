@@ -15,7 +15,6 @@ export const Contact = () => {
     const [state, handleSubmit] = useForm("mgepgjea");
 
     useEffect(() => {
-        console.log("state.errors", state.errors);
         if (state.errors?.[0]) {
             toast.error(state.errors?.[0]?.message, {
                 position: "top-right",

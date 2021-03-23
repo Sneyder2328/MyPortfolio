@@ -10,7 +10,7 @@ import gitLogo from "../../images/ic_git.svg"
 import firebaseLogo from "../../images/ic_firebase.svg"
 import { FormattedMessage } from "react-intl"
 
-export const About = () => {
+export const About = ({langKey}) => {
     return (
         <section id={"about"} className={styles.aboutWrapper}>
             <FormattedMessage id="about.title">
@@ -26,7 +26,7 @@ export const About = () => {
                             <p>{txt}</p>
                         )}
                     </FormattedMessage>
-                    <a href="CurriculumVitae.pdf" target="_blank" rel="noopener">
+                    <a href={`CurriculumVitae.${langKey}.pdf`} target="_blank" rel="noopener">
                         <FormattedMessage id="about.view_cv">
                             {(txt) => (
                                 <button className="button">{txt}</button>

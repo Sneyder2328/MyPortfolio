@@ -3,8 +3,9 @@ import classNames from "classnames";
 import * as styles from './styles.module.scss'
 import { LanguagePicker } from "./LanguagePicker/languagePicker";
 import { FormattedMessage } from "react-intl";
+import { CustomLink } from "../../components/UI/CustomLink";
 
-export const NavBar = () => {
+export const NavBar = ({ langKey }) => {
   const [navActive, setNavActive] = useState(false)
   const [scrollY, setScrollY] = useState(0)
   const [alpha, setAlpha] = useState(0.0)
@@ -20,7 +21,7 @@ export const NavBar = () => {
   }, [])
 
   useEffect(() => {
-    setAlpha(scrollY / window.innerHeight)
+    setAlpha(scrollY / (window.innerHeight * 0.9))
   }, [scrollY])
 
   const bgStyle = {
@@ -34,9 +35,9 @@ export const NavBar = () => {
           { [styles.navActive]: navActive })}>
           <FormattedMessage id="header.projects">
             {(txt) => (<li>
-              <a href="#projects">
+              <CustomLink to="projects">
                 {txt}
-              </a>
+              </CustomLink>
             </li>)}
           </FormattedMessage>
           <FormattedMessage id="header.blog">
@@ -48,20 +49,20 @@ export const NavBar = () => {
           </FormattedMessage>
           <FormattedMessage id="header.about">
             {(txt) => (<li>
-              <a href="#about">
+              <CustomLink to="about">
                 {txt}
-              </a>
+              </CustomLink>
             </li>)}
           </FormattedMessage>
           <FormattedMessage id="header.contact">
             {(txt) => (<li>
-              <a href="#contact">
+              <CustomLink to="contact">
                 {txt}
-              </a>
+              </CustomLink>
             </li>)}
           </FormattedMessage>
         </ul>
-        <LanguagePicker />
+        <LanguagePicker langKey={langKey} />
         <div className={classNames(styles.burger,
           { [styles.navActive]: navActive })} onClick={() => { setNavActive(!navActive) }}>
           <div className={styles.line1}></div>

@@ -10,9 +10,9 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: linear-gradient(rgba(4, 104, 134, 0.267), #002a5a5d),
-        url("./../../images/coding-bg.jpg");
+    background-image: linear-gradient(rgba(4, 104, 134, 0.267), #002a5a5d), url("./../../images/coding-bg.jpg");
     display: flex;
+    flex-direction: column;
 
     .content {
         margin: auto auto;
@@ -39,12 +39,40 @@
             letter-spacing: 2px;
         }
     }
+
+    .cta {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 auto;
+        padding-bottom: 8px;
+        cursor: pointer;
+
+        span {
+            color: $colorOnPrimaryDark1;
+            font-size: 1.2rem;
+            font-weight: 500;
+            letter-spacing: 1.1px;
+            margin-bottom: 6px;
+        }
+    }
 }
 
 @media (min-width: $medium-width) {
     .home .content {
         .title {
-            font-size: 2.7rem;
+            font-size: 2.4rem;
+        }
+        .desc {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media (min-width: $large-width) {
+    .home .content {
+        .title {
+            font-size: 2.5rem;
         }
         .desc {
             font-size: 2.2rem;
@@ -52,14 +80,13 @@
     }
 }
 
-
-@media (min-width: $large-width) {
+@media (min-width: $xlarge-width) {
     .home .content {
         .title {
-            font-size: 2.95rem;
+            font-size: 2.6rem;
         }
         .desc {
-            font-size: 2.45rem;
+            font-size: 2.3rem;
         }
     }
 }

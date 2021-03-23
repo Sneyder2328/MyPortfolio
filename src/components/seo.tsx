@@ -3,7 +3,7 @@ import { graphql, useStaticQuery, withPrefix } from "gatsby"
 import { Helmet } from "react-helmet"
 import { FormattedMessage } from "react-intl"
 
-export const SEO = ({ lang, title, ...props }) => {
+export const SEO = ({ lang }) => {
   const data = useStaticQuery(graphql`
   query {
     site {
@@ -16,16 +16,14 @@ export const SEO = ({ lang, title, ...props }) => {
     }
   }
   `)
-  console.log("props in seo=", props);
-  const metaDescription = data.site.siteMetadata.description
-  const { siteUrl, author } = data.site.siteMetadata
+  const { siteUrl, author, description } = data.site.siteMetadata
 
   return (
     <FormattedMessage id="title">
-      {(txt) => (
+      {(title) => (
         <Helmet
           htmlAttributes={{ lang }}
-          defaultTitle={txt} titleTemplate={`%s | ${txt}`}
+          defaultTitle={title} titleTemplate={`%s | ${title}`}
           meta={[
             {
               name: `author`,
@@ -33,7 +31,7 @@ export const SEO = ({ lang, title, ...props }) => {
             },
             {
               name: `description`,
-              content: metaDescription,
+              content: description,
             },
             {
               property: `og:title`,
@@ -49,7 +47,7 @@ export const SEO = ({ lang, title, ...props }) => {
             },
             {
               property: `og:description`,
-              content: metaDescription,
+              content: description,
             },
             {
               property: `og:type`,
@@ -69,7 +67,7 @@ export const SEO = ({ lang, title, ...props }) => {
             },
             {
               name: `twitter:description`,
-              content: metaDescription,
+              content: description,
             },
             {
               name: `twitter:author`,
@@ -89,9 +87,3 @@ export const SEO = ({ lang, title, ...props }) => {
     </FormattedMessage>
   )
 }
-
-// SEO.defaultProps = {
-//   lang: `en`,
-//   meta: [],
-//   description: ``,
-// }
