@@ -7,6 +7,7 @@ export const en = {
     "header.projects": 'Projects',
     "home.title": 'Hi, I´m Sneyder Angulo',
     "home.subTitle": 'A passionate Software developer',
+    "home.what_do": 'What I do?',
     "projects.title": "These are some of my projects",
     "projects.see_live": "See live",
     "projects.github_repo": "Github repo",

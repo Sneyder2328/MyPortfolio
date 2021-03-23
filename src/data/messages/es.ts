@@ -7,6 +7,7 @@ export const es = {
     "header.projects": 'Proyectos',
     "home.title": 'Hola, Soy Sneyder Angulo',
     "home.subTitle": 'Un desarrollador de software apasionado',
+    "home.what_do": '¿Lo que hago?',
     "projects.title": 'Aca estan algunos de mis proyectos',
     "projects.see_live": "Visitar sitio",
     "projects.github_repo": "Ver repositorio",

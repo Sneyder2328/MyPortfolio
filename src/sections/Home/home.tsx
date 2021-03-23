@@ -1,5 +1,5 @@
 import React from "react"
-import { FormattedMessage } from "react-intl"
+import { useIntl } from "react-intl"
 import * as styles from './styles.module.scss'
 import {
     faChevronDown
@@ -8,18 +8,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { CustomLink } from "../../components/UI/CustomLink"
 
 export const Home = () => {
+    const intl = useIntl()
+
     return (
         <section className={styles.home}>
             <div className={styles.content}>
-                <FormattedMessage id="home.title">
-                    {(txt) => (<h2 className={styles.title}>{txt}</h2>)}
-                </FormattedMessage>
-                <FormattedMessage id="home.subTitle">
-                    {(txt) => (<h3 className={styles.desc}>{txt}</h3>)}
-                </FormattedMessage>
+                <h2 className={styles.title}>{intl.formatMessage({ id: "home.title" })}</h2>
+                <h3 className={styles.desc}>{intl.formatMessage({ id: "home.subTitle" })}</h3>
             </div>
             <CustomLink className={styles.cta} to="projects">
-                <span>What I do?</span>
+                <span>{intl.formatMessage({ id: "home.what_do" })}</span>
                 <FontAwesomeIcon icon={faChevronDown} size="2x" color={"#FFF"} />
             </CustomLink>
         </section>
