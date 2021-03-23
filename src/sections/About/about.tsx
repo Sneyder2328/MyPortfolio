@@ -27,7 +27,7 @@ export const About = ({langKey}) => {
                             <p>{txt}</p>
                         )}
                     </FormattedMessage>
-                    <a href={`CurriculumVitae.${langKey}.pdf`} target="_blank" rel="noopener">
+                    <a href={`CurriculumVitae.pdf`} target="_blank" rel="noopener">
                         <FormattedMessage id="about.view_cv">
                             {(txt) => (
                                 <button className="button">{txt}</button>

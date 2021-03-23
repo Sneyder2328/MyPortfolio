@@ -11,7 +11,7 @@ export const projects = {
         {
             title: "LaSocialNetwork",
             date: "2020",
-            description: "Social network designed and built from scratch",
+            description: "SPA Web App built from scratch that covers all the basic functionalities of a social network, including the publication of posts, comments, likes, dislikes, profiles, instant messaging, etc.",
             tags: ["React", "Nodejs", "Express", "Socket.io"],
             website: "https://sneyder-lsn.netlify.app/",
             githubRepo: "https://github.com/Sneyder2328/LaSocialNetwork",
@@ -31,7 +31,7 @@ export const projects = {
         {
             title: "CryptoTracker",
             date: "2018",
-            description: "Cryptocurrencies tracker project with alert price notifications included.",
+            description: "Android app and web server that collects information about cryptocurrencies. It allows setting price alerts and portfolio management.",
             tags: ["Kotlin", "MVVM", "FCM", "Room", "Retrofit"],
             googlePlay: "https://play.google.com/store/apps/details?id=com.sneyder.cryptotracker",
             githubRepo: "https://github.com/Sneyder2328/CryptoTracker",
@@ -69,7 +69,7 @@ export const projects = {
         {
             title: "Tic Tac Toe Game",
             date: "2017",
-            description: "One of the most loved, classic games of all time perfectly recreated for your mobile.",
+            description: "Mobile version of the popular game Tic Tac Toe, made several years ago while learning the basics of Android app development.",
             tags: ["Java"],
             googlePlay: "https://play.google.com/store/apps/details?id=com.twismart.games.tictactoe",
             images: [TicTacToe],
@@ -80,7 +80,9 @@ export const projects = {
         {
             title: "LaSocialNetwork",
             date: "2020",
-            description: "Creacion y diseño de red social completa y desde cero.",
+            description: `
+            App Web SPA construida desde cero que cubre todas las funcionales básicas de una red social, incluyendo así la publicación de posts, comentarios, likes, dislikes, perfiles, mensajería instantánea, etc.
+          `,
             tags: ["React", "Nodejs", "Express", "Socket.io"],
             website: "https://sneyder-lsn.netlify.app/",
             githubRepo: "https://github.com/Sneyder2328/LaSocialNetwork",
@@ -90,7 +92,7 @@ export const projects = {
         {
             title: "Funding rates for Binance",
             date: "2021",
-            description: "The express server gathers every 8 hours the data from Binance´s Api, process it and stores it in Firebase firestore. The app takes care of displaying the data.",
+            description: "App Android que permite visualizar la data correspondiente a las tasas de financiación de la plataforma de Binance Futures.",
             tags: ["Kotlin", "MVVM", "Firebase firestore", "Nodejs", "Express"],
             googlePlay: "https://play.google.com/store/apps/details?id=com.sneyder.fundingrates",
             githubRepo: "https://github.com/Sneyder2328/FundingRatesForBinanceApp",
@@ -100,7 +102,7 @@ export const projects = {
         {
             title: "CryptoTracker",
             date: "2018",
-            description: "Cryptocurrencies tracker project with alert price notifications included.",
+            description: `App Android y servidor web que recopila información sobre las criptomonedas. Permite establecer alertas de precio y el manejo de portafolio.`,
             tags: ["Kotlin", "MVVM", "FCM", "Room", "Retrofit"],
             googlePlay: "https://play.google.com/store/apps/details?id=com.sneyder.cryptotracker",
             githubRepo: "https://github.com/Sneyder2328/CryptoTracker",
@@ -110,7 +112,7 @@ export const projects = {
         {
             title: "BarcaFansClub",
             date: "2018",
-            description: "Social network designed around the FC Barcelona fans theming, with integrated News and La Liga´s table sections.",
+            description: `Red social con temática del FB Barcelona, además de las funciones típicas de una RRSS la misma incluye la tabla de posiciones de la liga española e información relevante sobre el club.`,
             tags: ["Kotlin", "Firebase messaging", "DynamoDB"],
             githubRepo: "https://github.com/Sneyder2328/BarcaFansClub",
             images: [barcafansclub1],
@@ -119,7 +121,7 @@ export const projects = {
         {
             title: "Portfolio Website",
             date: "2021",
-            description: "Personal porfolio website fully designed and built from scratch while learning Gatsby framework",
+            description: "Sitio web personal de portafolio desarrollado y diseñado mientras aprendía a usar el framework GatsbyJs.",
             tags: ["React", "Sass", "Gatsby"],
             website: "/",
             githubRepo: "https://github.com/Sneyder2328/MyPorfolio",
@@ -129,7 +131,7 @@ export const projects = {
         {
             title: "US Constitution App",
             date: "2016",
-            description: "United States Constitution available as an app in an easy to read manner.",
+            description: "Versión digital de la Constitución de EEUU que permite su cómoda lectura e interacción con las diferentes secciones de la misma desde cualquier dispositivo Android.",
             tags: ["Java", "Web scrapper"],
             googlePlay: "https://play.google.com/store/apps/details?id=com.twismart.usconstitution",
             images: [USConstitution],
@@ -138,7 +140,7 @@ export const projects = {
         {
             title: "Tic Tac Toe Game",
             date: "2017",
-            description: "One of the most loved, classic games of all time perfectly recreated for your mobile.",
+            description: `Versión móvil del popular juego Tres en Raya, realizado hace ya varios años mientras aprendía las bases del desarrollo de apps Android.`,
             tags: ["Java"],
             googlePlay: "https://play.google.com/store/apps/details?id=com.twismart.games.tictactoe",
             images: [TicTacToe],
