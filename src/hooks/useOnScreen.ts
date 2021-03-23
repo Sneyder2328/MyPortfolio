@@ -14,9 +14,9 @@ export const useOnScreen = (ref) => {
             setIntersecting(entry.isIntersecting);
         }
     };
-    const observer = new IntersectionObserver(handleObserver, options)
-
+    
     useEffect(() => {
+        const observer = new IntersectionObserver(handleObserver, options)
         observer.observe(ref.current)
         return () => { observer.disconnect() }
     }, [])
