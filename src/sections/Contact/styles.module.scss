@@ -36,11 +36,12 @@
                 letter-spacing: 1.3px;
             }
             p {
-                margin-top: 10px;
+                margin-top: 20px;
                 color: $colorOnPrimaryDark1;
                 line-height: 1.4;
             }
             .mediums {
+                margin-top: 20px;
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
@@ -55,6 +56,7 @@
                 }
             }
             .socialLinks {
+                margin-top: 20px;
                 display: flex;
                 align-items: flex-end;
                 a {

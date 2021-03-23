@@ -1,5 +1,6 @@
 import React from "react"
 import * as styles from './styles.module.scss'
+import classNames from "classnames"
 import photo from "../../images/photo.jpg"
 import kotlinLogo from "../../images/ic_kotlin.svg"
 import tsLogo from "../../images/ic_ts.svg"
@@ -8,10 +9,12 @@ import reactLogo from "../../images/react.svg"
 import androidLogo from "../../images/ic_android.svg"
 import gitLogo from "../../images/ic_git.svg"
 import firebaseLogo from "../../images/ic_firebase.svg"
-import { FormattedMessage } from "react-intl"
+import { FormattedMessage, useIntl } from "react-intl"
 import { Section } from "../../components/UI/Section"
 
-export const About = ({langKey}) => {
+export const About = () => {
+    const intl = useIntl()
+
     return (
         <Section id={"about"} className={styles.aboutWrapper} >
             <FormattedMessage id="about.title">
@@ -22,25 +25,13 @@ export const About = ({langKey}) => {
             <div className={styles.about}>
                 <img className={styles.avatar} src={photo} alt="Sneyder Angulo" />
                 <div className={styles.info}>
-                    <FormattedMessage id="about.bio">
-                        {(txt) => (
-                            <p>{txt}</p>
-                        )}
-                    </FormattedMessage>
-                    <a href={`CurriculumVitae.pdf`} target="_blank" rel="noopener">
-                        <FormattedMessage id="about.view_cv">
-                            {(txt) => (
-                                <button className="button">{txt}</button>
-                            )}
-                        </FormattedMessage>
+                    <p className={styles.bio}>{intl.formatMessage({ id: "about.bio" })}</p>
+                    <a className={classNames("button", styles.button)} href={`CurriculumVitae.pdf`} target="_blank" rel="noopener">
+                        {intl.formatMessage({ id: "about.view_cv" })}
                     </a>
                 </div>
                 <div className={styles.skills}>
-                    <FormattedMessage id="about.skills">
-                        {(txt) => (
-                            <h4>{txt}</h4>
-                        )}
-                    </FormattedMessage>
+                    <h4>{intl.formatMessage({ id: "about.skills" })}</h4>
                     <div>
                         <img src={kotlinLogo} />
                         <img src={reactLogo} />

@@ -28,7 +28,7 @@ export const Index = (props) => {
             <NavBar langKey={langKey} />
             <Home />
             <Projects langKey={langKey} />
-            <About langKey={langKey} />
+            <About />
             <Contact />
             <Footer />
             <ToastContainer />

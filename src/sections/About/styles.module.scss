@@ -23,20 +23,21 @@
         .info {
             width: 80%;
             box-sizing: border-box;
-            padding-left: 30px;
+            padding-left: 20px;
             display: flex;
             justify-content: space-between;
-            flex-wrap: wrap;
+            flex-direction: column;
 
-            p {
+            .bio {
                 color: $colorOnPrimaryDark1;
                 line-height: 1.5;
                 letter-spacing: 0.7px;
                 font-size: 0.9rem;
             }
-            button {
+            .button {
+                width: 100%;
+                box-sizing: border-box;
                 margin-top: 16px;
-                align-self: flex-end;
             }
         }
         .skills {
@@ -81,8 +82,11 @@
             .info {
                 width: 40%;
 
-                p {
+                .bio {
                     font-size: 0.97rem;
+                }
+                .button {
+                    width: fit-content;
                 }
             }
             .skills {

@@ -23,5 +23,5 @@ export const en = {
     "contact.form.email": "Email",
     "contact.form.message": "Message",
     "contact.form.send": "Send Message",
-    "footer.title": "Designed and built by Sneyder Angulo © 2021"
+    "footer.title": "Designed and built by Sneyder Angulo © "
 };
