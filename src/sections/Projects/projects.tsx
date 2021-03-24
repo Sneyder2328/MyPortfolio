@@ -78,8 +78,8 @@ const Button: React.FC<{ type: "web" | "googlePlay" | "github"; url: string }> =
 
     const labelButton = {
         "web": intl.formatMessage({ id: "projects.see_live" }),
-        "googlePlay": intl.formatMessage({ id: "projects.github_repo" }),
-        "github": intl.formatMessage({ id: "projects.get_app" })
+        "googlePlay": intl.formatMessage({ id: "projects.get_app" }),
+        "github": intl.formatMessage({ id: "projects.github_repo" })
     }
     return (
         <a className={styles.button + " button"} href={url} target="_blank" rel="noopener">
