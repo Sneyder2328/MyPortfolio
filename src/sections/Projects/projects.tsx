@@ -22,23 +22,21 @@ type ProjectProps = {
 }
 
 export const Projects = ({ langKey }) => {
+    const intl = useIntl()
+
     return (
-        <Section id="projects" className={styles.projects}>
-            <FormattedMessage id="projects.title">
-                {(txt) => (
-                    <h3 className={"section-title"}>{txt}</h3>
-                )}
-            </FormattedMessage>
+        <div id="projects" className={styles.projects}>
+            <h3 className={"section-title"}>{intl.formatMessage({ id: "projects.title" })}</h3>
             <div className={styles.items}>
                 {projects[langKey].map((project) => (<Project project={project} key={project.title} />))}
             </div>
-        </Section>
+        </div>
     )
 }
 
 const Project: React.FC<{ project: ProjectProps }> = ({ project }) => {
     return (
-        <div className={styles.project}>
+        <Section className={styles.project}>
             <img src={project.images[0]} />
             <div className={styles.content}>
                 <div className={styles.topSection}>
@@ -58,7 +56,7 @@ const Project: React.FC<{ project: ProjectProps }> = ({ project }) => {
                     {project.githubRepo && <Button url={project.githubRepo} type="github" />}
                 </div>
             </div>
-        </div>
+        </Section>
     )
 }
 

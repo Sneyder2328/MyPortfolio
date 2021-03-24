@@ -6,7 +6,7 @@ export const useOnScreen = (ref) => {
     const options = {
         root: null,
         rootMargin: "0px",
-        threshold: 0.01
+        threshold: 0.02
     };
 
     const handleObserver = ([entry]: IntersectionObserverEntry[]): void => {

@@ -9,11 +9,12 @@ import {
 import * as styles from './styles.module.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { toast } from 'react-toastify';
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 import { Section } from "../../components/UI/Section";
 
 export const Contact = () => {
     const [state, handleSubmit] = useForm("mgepgjea");
+    const intl = useIntl()
 
     useEffect(() => {
         if (state.errors?.[0]) {
@@ -39,24 +40,18 @@ export const Contact = () => {
     }
 
     return (
-        <Section id="contact" className={styles.contactWrapper}>
-            <FormattedMessage id="contact.title">
-                {(txt) => (
-                    <h3 className="section-title">{txt}</h3>
-                )}
-            </FormattedMessage>
-            <div className={styles.contact}>
+        <div id="contact" className={styles.contactWrapper}>
+            <h3 className="section-title">
+                {intl.formatMessage({ id: "contact.title" })}
+            </h3>
+            <Section className={styles.contact}>
                 <div className={styles.info}>
-                    <FormattedMessage id="contact.subtitle">
-                        {(txt) => (
-                            <h4>{txt}</h4>
-                        )}
-                    </FormattedMessage>
-                    <FormattedMessage id="contact.desc">
-                        {(txt) => (
-                            <p>{txt}</p>
-                        )}
-                    </FormattedMessage>
+                    <h4>
+                        {intl.formatMessage({ id: "contact.subtitle" })}
+                    </h4>
+                    <p>
+                        {intl.formatMessage({ id: "contact.desc" })}
+                    </p>
                     <div className={styles.mediums}>
                         <div>
                             <FontAwesomeIcon icon={faPhoneAlt} size="1x" color={"#FFF"} />
@@ -84,25 +79,13 @@ export const Contact = () => {
                     </div>
                 </div>
                 <form className={styles.form} onSubmit={handleSubmit}>
-                    <FormattedMessage id="contact.form.name">
-                        {(txt) => (<input placeholder={txt} name="name" />)}
-                    </FormattedMessage>
-                    <FormattedMessage id="contact.form.email">
-                        {(txt) => (<input placeholder={txt} type="email" name="_replyto" />)}
-                    </FormattedMessage>
+                    <input placeholder={intl.formatMessage({ id: "contact.form.name" })} name="name" />
+                    <input placeholder={intl.formatMessage({ id: "contact.form.email" })} type="email" name="_replyto" />
                     <input type="text" name="_gotcha" style={{ display: "none" }} />
-                    <FormattedMessage id="contact.form.message">
-                        {(txt) => (<textarea placeholder={txt} name="message" />)}
-                    </FormattedMessage>
-
-                    <FormattedMessage id="contact.form.send">
-                        {(txt) => (
-                            <button className="button" type="submit" disabled={state.submitting}>{txt}</button>
-                        )}
-                    </FormattedMessage>
-
+                    <textarea placeholder={intl.formatMessage({ id: "contact.form.message" })} name="message" />
+                    <button className="button" type="submit" disabled={state.submitting}>{intl.formatMessage({ id: "contact.form.send" })}</button>
                 </form>
-            </div>
-        </Section>
+            </Section>
+        </div>
     )
 }

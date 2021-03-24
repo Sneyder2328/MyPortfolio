@@ -9,20 +9,16 @@ import reactLogo from "../../images/react.svg"
 import androidLogo from "../../images/ic_android.svg"
 import gitLogo from "../../images/ic_git.svg"
 import firebaseLogo from "../../images/ic_firebase.svg"
-import { FormattedMessage, useIntl } from "react-intl"
+import { useIntl } from "react-intl"
 import { Section } from "../../components/UI/Section"
 
 export const About = () => {
     const intl = useIntl()
 
     return (
-        <Section id={"about"} className={styles.aboutWrapper} >
-            <FormattedMessage id="about.title">
-                {(txt) => (
-                    <h3 className="section-title">{txt}</h3>
-                )}
-            </FormattedMessage>
-            <div className={styles.about}>
+        <div id={"about"} className={styles.aboutWrapper} >
+            <h3 className="section-title">{intl.formatMessage({ id: "about.title" })}</h3>
+            <Section className={styles.about}>
                 <img className={styles.avatar} src={photo} alt="Sneyder Angulo" />
                 <div className={styles.info}>
                     <p className={styles.bio}>{intl.formatMessage({ id: "about.bio" })}</p>
@@ -42,7 +38,7 @@ export const About = () => {
                         <img src={firebaseLogo} />
                     </div>
                 </div>
-            </div>
-        </Section>
+            </Section>
+        </div>
     )
 }

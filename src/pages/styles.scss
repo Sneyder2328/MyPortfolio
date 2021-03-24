@@ -45,10 +45,10 @@ a {
 
 .animated {
   opacity: 0;
-  animation-duration: 0.7s;
+  animation-duration: 0.8s;
   animation-fill-mode: both;
   animation-iteration-count: 1;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease;
 }
 
 @keyframes fadeInUpBig {

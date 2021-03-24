@@ -6,8 +6,8 @@ export const Section = ({ className, children, ...props }) => {
     const ref = useRef()
     const isVisible = useOnScreen(ref)
 
-    return (<section className={classNames(className, "animated", { "fadeInUpBig": isVisible })}
+    return (<div className={classNames(className, "animated", { "fadeInUpBig": isVisible })}
         ref={ref} {...props}>
         {children}
-    </section>)
+    </div>)
 }
