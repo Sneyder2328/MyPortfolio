@@ -68,11 +68,6 @@ const Tag: React.FC<{ tag: string }> = ({ tag }) => {
     )
 }
 
-// const labelButton = {
-//     "web": "SEE LIVE",
-//     "googlePlay": "GET APP",
-//     "github": "GITHUB REPO",
-// }
 const Button: React.FC<{ type: "web" | "googlePlay" | "github"; url: string }> = ({ type, url }) => {
     const intl = useIntl()
 

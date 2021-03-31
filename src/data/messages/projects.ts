@@ -1,8 +1,8 @@
 import LSNImg1 from "../../images/lsn1.jpg"
 import frapp1 from "../../images/frapp1.jpg"
 import cryptotracker1 from "../../images/cryptotracker1.png"
-import barcafansclub1 from "../../images/barcafansclub1.png"
-import portfolio from "../../images/screenshot_portfolio.png"
+import barcafansclub1 from "../../images/barcafansclub1.jpg"
+import portfolio from "../../images/screenshot_portfolio1.jpg"
 import USConstitution from "../../images/screenshot_us_constitution.png"
 import TicTacToe from "../../images/screenshot_tic_tac_toe.png"
 
