@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://sneyder.net/',
-    description: `Personal website of Sneyder Thomas Angulo Soto, software developer based in Venezuela.`,
+    description: `I am Sneyder Angulo, a passionate software developer based in Venezuela. Currently working at Mercury Cash`,
     author: {
       name: "Sneyder Angulo",
       twitter: `@sneyderHack`
