@@ -19,19 +19,23 @@ import { en } from "../../data/messages/en"
 
 const messages = { en, es };
 
-export const Index = (props) => {
-    const { langKey } = props.pageContext
+export const Index = () => {
+  const [langKey, setLangKey] = React.useState(localStorage.getItem('language') || 'en')
 
-    return (
-        <IntlProvider locale={langKey} messages={messages[langKey]}>
-            <SEO lang={langKey} />
-            <NavBar langKey={langKey} />
-            <Home />
-            <Projects langKey={langKey} />
-            <About />
-            <Contact />
-            <Footer />
-            <ToastContainer />
-        </IntlProvider>
-    )
+  React.useEffect(() => {
+    localStorage.setItem('language', langKey)
+  }, [langKey])
+
+  return (
+    <IntlProvider locale={langKey} messages={messages[langKey]}>
+      <SEO lang={langKey} />
+      <NavBar langKey={langKey} onChangeLang={setLangKey} />
+      <Home />
+      <Projects langKey={langKey} />
+      <About />
+      <Contact />
+      <Footer />
+      <ToastContainer />
+    </IntlProvider>
+  )
 }

@@ -5,7 +5,7 @@ import { LanguagePicker } from "./LanguagePicker/languagePicker";
 import { FormattedMessage } from "react-intl";
 import { CustomLink } from "../../components/UI/CustomLink";
 
-export const NavBar = ({ langKey }) => {
+export const NavBar = ({ langKey, onChangeLang }) => {
   const [navActive, setNavActive] = useState(false)
   const [scrollY, setScrollY] = useState(0)
   const [alpha, setAlpha] = useState(0.0)
@@ -64,7 +64,7 @@ export const NavBar = ({ langKey }) => {
             </li>)}
           </FormattedMessage>
         </ul>
-        <LanguagePicker langKey={langKey} />
+        <LanguagePicker langKey={langKey} onChangeLang={onChangeLang} />
         <div className={classNames(styles.burger,
           { [styles.navActive]: navActive })} onClick={() => { setNavActive(!navActive) }}>
           <div className={styles.line1}></div>
