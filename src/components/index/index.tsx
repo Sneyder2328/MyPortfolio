@@ -20,16 +20,21 @@ import { en } from "../../data/messages/en"
 const messages = { en, es };
 
 export const Index = () => {
-  const [langKey, setLangKey] = React.useState((localStorage && localStorage.getItem('language')) || 'en')
+  const [langKey, setLangKey] = React.useState('en')
 
   React.useEffect(() => {
-    localStorage && localStorage.setItem('language', langKey)
-  }, [langKey])
+    window && window.localStorage && setLangKey(window.localStorage.getItem('language'))
+  }, [])
+
+  const handleChangeLanguage = (lang) => {
+    setLangKey(lang)
+    window?.localStorage?.setItem('language', lang)
+  }
 
   return (
     <IntlProvider locale={langKey} messages={messages[langKey]}>
       <SEO lang={langKey} />
-      <NavBar langKey={langKey} onChangeLang={setLangKey} />
+      <NavBar langKey={langKey} onChangeLang={handleChangeLanguage} />
       <Home />
       <Projects langKey={langKey} />
       <About />
