@@ -11,7 +11,7 @@ export const projects = {
         {
             title: "LaSocialNetwork",
             date: "2020",
-            description: "SPA Web App built from scratch that covers all the basic functionalities of a social network, including the publication of posts, comments, likes, dislikes, profiles, instant messaging, etc.",
+            description: "SPA Web App that covers all the basic functionalities of a social network, including the publication of posts, comments, likes, dislikes, profiles, instant messaging, etc.",
             tags: ["React", "Nodejs", "Express", "Socket.io"],
             website: "https://sneyder-lsn.netlify.app/",
             githubRepo: "https://github.com/Sneyder2328/LaSocialNetwork",
@@ -50,7 +50,7 @@ export const projects = {
         {
             title: "Portfolio Website",
             date: "2021",
-            description: "Personal porfolio website fully designed and built from scratch while learning Gatsby framework",
+            description: "Personal porfolio website. Fully designed and built from scratch while learning the Gatsby framework for fun.",
             tags: ["React", "Sass", "Gatsby"],
             website: "/",
             githubRepo: "https://github.com/Sneyder2328/MyPorfolio",
@@ -60,7 +60,7 @@ export const projects = {
         {
             title: "US Constitution App",
             date: "2016",
-            description: "United States Constitution available as an app in an easy to read manner.",
+            description: "Interactive, user-friendly United States Constitution app built with android native technologies.",
             tags: ["Java", "Web scrapper"],
             googlePlay: "https://play.google.com/store/apps/details?id=com.twismart.usconstitution",
             images: [USConstitution],
@@ -121,7 +121,7 @@ export const projects = {
         {
             title: "Portfolio Website",
             date: "2021",
-            description: "Sitio web personal de portafolio desarrollado y diseñado mientras aprendía a usar el framework GatsbyJs.",
+            description: "Sitio web personal de portafolio. Desarrollado y diseñado desde cero mientras aprendía a usar el framework GatsbyJs.",
             tags: ["React", "Sass", "Gatsby"],
             website: "/",
             githubRepo: "https://github.com/Sneyder2328/MyPorfolio",
@@ -131,7 +131,7 @@ export const projects = {
         {
             title: "US Constitution App",
             date: "2016",
-            description: "Versión digital de la Constitución de EEUU que permite su cómoda lectura e interacción con las diferentes secciones de la misma desde cualquier dispositivo Android.",
+            description: "Versión digital de la Constitución de EEUU amigable al usuario e interactiva, construida de forma nativa para Android",
             tags: ["Java", "Web scrapper"],
             googlePlay: "https://play.google.com/store/apps/details?id=com.twismart.usconstitution",
             images: [USConstitution],

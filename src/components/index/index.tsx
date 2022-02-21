@@ -20,10 +20,10 @@ import { en } from "../../data/messages/en"
 const messages = { en, es };
 
 export const Index = () => {
-  const [langKey, setLangKey] = React.useState(localStorage.getItem('language') || 'en')
+  const [langKey, setLangKey] = React.useState((localStorage && localStorage.getItem('language')) || 'en')
 
   React.useEffect(() => {
-    localStorage.setItem('language', langKey)
+    localStorage && localStorage.setItem('language', langKey)
   }, [langKey])
 
   return (
