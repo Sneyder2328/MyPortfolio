@@ -19,11 +19,13 @@ import { en } from "../../data/messages/en"
 
 const messages = { en, es };
 
+const DEFAULT_LOCALE = 'en'
+
 export const Index = () => {
-  const [langKey, setLangKey] = React.useState('en')
+  const [langKey, setLangKey] = React.useState(DEFAULT_LOCALE)
 
   React.useEffect(() => {
-    window && window.localStorage && setLangKey(window.localStorage.getItem('language'))
+    window && window.localStorage && setLangKey(window.localStorage.getItem('language') || DEFAULT_LOCALE)
   }, [])
 
   const handleChangeLanguage = (lang) => {
