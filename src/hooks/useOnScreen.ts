@@ -5,7 +5,7 @@ export const useOnScreen = (ref) => {
 
     const options = {
         root: null,
-        rootMargin: "0px",
+        rootMargin: "30px",
         threshold: 0.02
     };
 
