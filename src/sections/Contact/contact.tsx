@@ -34,7 +34,7 @@ export const Contact = () => {
         return (
             <section id="contact" className={styles.contactWrapper}>
                 <div className={styles.contact}>
-                    <p className={styles.thanks}>Thanks for contacting me!, Will reach out to you as soon as posible.</p>
+                    <p className={styles.thanks}>{intl.formatMessage({ id: "contact.form.success"})}</p>
                 </div>
             </section>)
     }

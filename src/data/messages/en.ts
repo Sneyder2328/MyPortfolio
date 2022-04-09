@@ -23,5 +23,6 @@ export const en = {
     "contact.form.email": "Email",
     "contact.form.message": "Message",
     "contact.form.send": "Send Message",
+    "contact.form.success": "Thanks for contacting me!, Will reach out to you as soon as posible.",
     "footer.title": "Designed and built by Sneyder Angulo © "
 };
