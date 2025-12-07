@@ -1,4 +1,7 @@
 ---
+import Analytics from '@vercel/analytics/astro'
+import SpeedInsights from "@vercel/speed-insights/astro"
+
 interface Props {
   title?: string;
   description?: string;
@@ -62,6 +65,8 @@ const ogImage = `${siteUrl}/meta.jpg`;
         font-family: var(--font-sans);
       }
     </style>
+    <Analytics />
+    <SpeedInsights />
   </head>
   <body class="bg-black text-white antialiased">
     <slot />
