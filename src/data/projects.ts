@@ -16,6 +16,20 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "tech-blog",
+    title: "Sneyder's Chronicles",
+    date: "2024",
+    description: {
+      en: "Personal tech blog exploring web development, software architecture, and the latest in technology. Features thoughts, tutorials, and deep dives into tools and frameworks.",
+      es: "Blog personal de tecnología explorando desarrollo web, arquitectura de software y las últimas tendencias. Incluye tutoriales y análisis profundos sobre herramientas y frameworks.",
+    },
+    tags: ["React", "TypeScript", "Astro", "MDX"],
+    image: "/images/screenshot_tech_blog.jpg",
+    website: "https://sneyder-chronicles.vercel.app/",
+    githubRepo: "https://github.com/Sneyder2328/tech-blog",
+    category: "web",
+  },
+  {
     id: "la-social-network",
     title: "LaSocialNetwork",
     date: "2020",
@@ -77,11 +91,11 @@ export const projects: Project[] = [
     title: "Portfolio Website",
     date: "2021",
     description: {
-      en: "Personal portfolio website. Fully designed and built from scratch while learning the Gatsby framework for fun.",
-      es: "Sitio web personal de portafolio. Desarrollado y diseñado desde cero mientras aprendía a usar el framework GatsbyJs.",
+      en: "Personal portfolio website. Fully designed and built from scratch while learning the Astro framework for fun.",
+      es: "Sitio web personal de portafolio. Desarrollado y diseñado desde cero mientras aprendía a usar el framework Astro.",
     },
     tags: ["React", "TypeScript", "Astro", "Tailwind"],
-    image: "/images/screenshot_portfolio1.jpg",
+    image: "/images/screenshot_portfolio.jpg",
     website: "/",
     githubRepo: "https://github.com/Sneyder2328/MyPorfolio",
     category: "web",
