@@ -18,7 +18,7 @@ export const es: Record<TranslationKey, string> = {
   "hero.name": "Sneyder Angulo",
   "hero.role": "Desarrollador de Software",
   "hero.description":
-    "Construyendo soluciones elegantes para plataformas web y móviles",
+    "Creando experiencias web de calidad con pasión y atención al detalle",
   "hero.cta": "Ver Mi Trabajo",
   "hero.contact": "Contáctame",
 
@@ -33,7 +33,7 @@ export const es: Record<TranslationKey, string> = {
   // About
   "about.title": "Sobre Mí",
   "about.bio":
-    "Desarrollador de apps web y apps Android nativas, actualmente cursando la carrera de Ingeniería en Informática bajo la modalidad online, disponible para ser contratado a tiempo parcial o para proyectos de tipo freelance.",
+    "Comencé a programar a los 14 años por pura curiosidad, y rápidamente se convirtió en una pasión de vida. Valoro el buen oficio, el código limpio y el crecimiento continuo, y también doy mucha importancia al valor de negocio detrás del software. Para mí el código tiene sentido cuando resuelve problemas reales para personas reales. Me especializo en desarrollo web moderno y disfruto crear aplicaciones full-stack usando tecnologías como React y Node.js",
   "about.skills": "Tecnologías",
   "about.view_cv": "Descargar CV",
   "about.experience": "Experiencia",

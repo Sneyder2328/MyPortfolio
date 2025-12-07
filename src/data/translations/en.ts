@@ -14,7 +14,7 @@ export const en = {
   "hero.greeting": "Hi, I'm",
   "hero.name": "Sneyder Angulo",
   "hero.role": "Software Developer",
-  "hero.description": "Building elegant solutions for web and mobile platforms",
+  "hero.description": "Crafting quality web experiences with passion and attention to detail",
   "hero.cta": "View My Work",
   "hero.contact": "Get in Touch",
 
@@ -29,7 +29,7 @@ export const en = {
   // About
   "about.title": "About Me",
   "about.bio":
-    "Informatics engineering student based in Venezuela. Started coding since high school because wanted to be a hacker, now mostly focused on Web and Mobile apps, overall, a passionate products builder and lifelong learner.",
+    "I started coding at 14 out of pure curiosity, and it quickly became a lifelong passion. I value craftsmanship, clean code, and continuous growth, while also caring deeply about the business value behind software. For me, code matters most when it solves real problems for real people. I specialize in modern web development and enjoy building full-stack applications with a focus on React, TypeScript, and backend architecture.",
   "about.skills": "Technologies",
   "about.view_cv": "Download CV",
   "about.experience": "Experience",
