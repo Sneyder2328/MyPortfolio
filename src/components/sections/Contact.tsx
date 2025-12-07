@@ -24,8 +24,8 @@ const CONTACT_INFO = [
   {
     icon: Phone,
     label: "contact.info.phone",
-    value: "+58 412 850 3559",
-    href: "tel:+584128503559",
+    value: "+58 412 555 1727",
+    href: "tel:+584125551727",
   },
   {
     icon: MessageCircle,
