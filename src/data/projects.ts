@@ -18,15 +18,29 @@ export const projects: Project[] = [
   {
     id: "tech-blog",
     title: "Sneyder's Chronicles",
-    date: "2024",
+    date: "2025",
     description: {
       en: "Personal tech blog exploring web development, software architecture, and the latest in technology. Features thoughts, tutorials, and deep dives into tools and frameworks.",
       es: "Blog personal de tecnología explorando desarrollo web, arquitectura de software y las últimas tendencias. Incluye tutoriales y análisis profundos sobre herramientas y frameworks.",
     },
     tags: ["React", "TypeScript", "Astro", "MDX"],
-    image: "/images/screenshot_tech_blog.jpg",
+    image: "/images/screenshot_tech_blog.png",
     website: "https://sneyder-chronicles.vercel.app/",
     githubRepo: "https://github.com/Sneyder2328/tech-blog",
+    category: "web",
+  },
+  {
+    id: "portfolio",
+    title: "Portfolio Website",
+    date: "2025",
+    description: {
+      en: "Personal portfolio website. Fully designed and built from scratch while learning the Astro framework for fun.",
+      es: "Sitio web personal de portafolio. Desarrollado y diseñado desde cero mientras aprendía a usar el framework Astro.",
+    },
+    tags: ["React", "TypeScript", "Astro", "Tailwind"],
+    image: "/images/screenshot_portfolio.png",
+    website: "/",
+    githubRepo: "https://github.com/Sneyder2328/MyPorfolio",
     category: "web",
   },
   {
@@ -85,20 +99,6 @@ export const projects: Project[] = [
     image: "/images/barcafansclub1.jpg",
     githubRepo: "https://github.com/Sneyder2328/BarcaFansClub",
     category: "android",
-  },
-  {
-    id: "portfolio",
-    title: "Portfolio Website",
-    date: "2021",
-    description: {
-      en: "Personal portfolio website. Fully designed and built from scratch while learning the Astro framework for fun.",
-      es: "Sitio web personal de portafolio. Desarrollado y diseñado desde cero mientras aprendía a usar el framework Astro.",
-    },
-    tags: ["React", "TypeScript", "Astro", "Tailwind"],
-    image: "/images/screenshot_portfolio.jpg",
-    website: "/",
-    githubRepo: "https://github.com/Sneyder2328/MyPorfolio",
-    category: "web",
   },
   {
     id: "us-constitution",
