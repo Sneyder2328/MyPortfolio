@@ -4,13 +4,14 @@ import { Button } from "../ui/Button";
 import { AnimatedContainer } from "../ui/AnimatedContainer";
 
 const SKILLS = [
-  { name: "Kotlin", icon: "/images/ic_kotlin.svg" },
   { name: "React", icon: "/images/react.svg" },
-  { name: "Android", icon: "/images/ic_android.svg" },
-  { name: "Node.js", icon: "/images/ic_nodejs1.svg" },
   { name: "TypeScript", icon: "/images/ic_ts.svg" },
-  { name: "Git", icon: "/images/ic_git.svg" },
-  { name: "Firebase", icon: "/images/ic_firebase.svg" },
+  { name: "Next.js", icon: "/images/ic_nextjs.svg" },
+  { name: "Astro", icon: "/images/ic_astro.svg" },
+  { name: "Node.js", icon: "/images/ic_nodejs1.svg" },
+  { name: "NestJS", icon: "/images/ic_nestjs.svg" },
+  { name: "Android", icon: "/images/ic_android.svg" },
+  { name: "React Native", icon: "/images/react.svg" },
 ];
 
 export function About() {
