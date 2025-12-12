@@ -47,8 +47,8 @@ export const projects: Project[] = [
     title: "Portfolio Website",
     date: "2025",
     description: {
-      en: "Modern portfolio website showcasing projects and skills. Built with Astro framework featuring multilingual support (English/Spanish), responsive design, smooth animations, and optimized performance. Includes sections for projects, about, and contact with a clean, professional interface.",
-      es: "Sitio web de portafolio moderno que muestra proyectos y habilidades. Construido con el framework Astro incluyendo soporte multidioma (inglés/español), diseño responsivo, animaciones fluidas y rendimiento optimizado. Incluye secciones para proyectos, acerca de mí y contacto con una interfaz limpia y profesional.",
+      en: "Modern portfolio website showcasing projects and skills. Built with Astro framework featuring multilingual support (English/Spanish), responsive design, smooth animations, and optimized performance.",
+      es: "Sitio web de portafolio moderno que muestra proyectos y habilidades. Construido con el framework Astro incluyendo soporte multidioma (inglés/español), diseño responsivo, animaciones fluidas y rendimiento optimizado.",
     },
     tags: ["React", "TypeScript", "Astro", "Tailwind"],
     image: "/images/screenshot_portfolio.png",

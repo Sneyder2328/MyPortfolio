@@ -25,6 +25,8 @@ export const en = {
   "projects.github_repo": "Source Code",
   "projects.get_app": "Get App",
   "projects.view_all": "View All Projects",
+  "projects.read_more": "Read more",
+  "projects.show_less": "Show less",
 
   // About
   "about.title": "About Me",

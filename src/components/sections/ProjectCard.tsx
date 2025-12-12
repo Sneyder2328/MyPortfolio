@@ -1,5 +1,6 @@
-import { ExternalLink, Github, Smartphone, Calendar } from "lucide-react";
+import { ExternalLink, Github, Smartphone, Calendar, ChevronDown } from "lucide-react";
 import { clsx } from "clsx";
+import { useState, useRef, useEffect } from "react";
 import type { Project } from "../../data/projects";
 import { useLanguage } from "../../context/LanguageContext";
 import { AnimatedContainer } from "../ui/AnimatedContainer";
@@ -11,9 +12,20 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, index }: ProjectCardProps) {
   const { language, t } = useLanguage();
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [isTruncated, setIsTruncated] = useState(false);
+  const descriptionRef = useRef<HTMLParagraphElement>(null);
 
   const delays = [0, 100, 200, 300, 400, 500, 600, 700] as const;
   const delay = delays[index % delays.length];
+
+  // Check if text is truncated
+  useEffect(() => {
+    const el = descriptionRef.current;
+    if (el) {
+      setIsTruncated(el.scrollHeight > el.clientHeight);
+    }
+  }, [language]);
 
   return (
     <AnimatedContainer
@@ -57,9 +69,32 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         </div>
 
         {/* Description */}
-        <p className="text-white/60 text-sm leading-relaxed mb-4 line-clamp-3">
-          {project.description[language]}
-        </p>
+        <div className="mb-4">
+          <p
+            ref={descriptionRef}
+            className={clsx(
+              "text-white/60 text-sm leading-relaxed transition-all duration-300",
+              !isExpanded && "line-clamp-3"
+            )}
+          >
+            {project.description[language]}
+          </p>
+          {isTruncated && (
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="mt-2 inline-flex items-center gap-1 text-xs text-white/40 hover:text-white/60 transition-colors"
+            >
+              {isExpanded ? t("projects.show_less") : t("projects.read_more")}
+              <ChevronDown
+                size={14}
+                className={clsx(
+                  "transition-transform duration-300",
+                  isExpanded && "rotate-180"
+                )}
+              />
+            </button>
+          )}
+        </div>
 
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-6">

@@ -29,6 +29,8 @@ export const es: Record<TranslationKey, string> = {
   "projects.github_repo": "Código Fuente",
   "projects.get_app": "Obtener App",
   "projects.view_all": "Ver Todos los Proyectos",
+  "projects.read_more": "Leer más",
+  "projects.show_less": "Mostrar menos",
 
   // About
   "about.title": "Sobre Mí",
