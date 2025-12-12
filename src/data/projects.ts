@@ -16,6 +16,19 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "hello-cosmos",
+    title: "Hello Cosmos!",
+    date: "2025",
+    description: {
+      en: "Full-stack educational web app for children to practice math and literacy skills. Features multi-profile support, customizable difficulty, spaced repetition (SM-2), text-to-speech, and parental controls. Monorepo architecture with Turborepo.",
+      es: "Aplicación web educativa full-stack para que los niños practiquen matemáticas y lectoescritura. Incluye soporte multi-perfil, dificultad personalizable, repetición espaciada (SM-2), texto a voz y controles parentales.",
+    },
+    tags: ["React", "TypeScript", "NestJS", "PostgreSQL", "Tailwind"],
+    image: "/images/screenshot_hello_cosmos.png",
+    website: "https://cosmos.sneyderangulo.com/",
+    category: "web",
+  },
+  {
     id: "tech-blog",
     title: "Sneyder's Chronicles",
     date: "2025",
@@ -34,8 +47,8 @@ export const projects: Project[] = [
     title: "Portfolio Website",
     date: "2025",
     description: {
-      en: "Personal portfolio website. Fully designed and built from scratch while learning the Astro framework for fun.",
-      es: "Sitio web personal de portafolio. Desarrollado y diseñado desde cero mientras aprendía a usar el framework Astro.",
+      en: "Modern portfolio website showcasing projects and skills. Built with Astro framework featuring multilingual support (English/Spanish), responsive design, smooth animations, and optimized performance. Includes sections for projects, about, and contact with a clean, professional interface.",
+      es: "Sitio web de portafolio moderno que muestra proyectos y habilidades. Construido con el framework Astro incluyendo soporte multidioma (inglés/español), diseño responsivo, animaciones fluidas y rendimiento optimizado. Incluye secciones para proyectos, acerca de mí y contacto con una interfaz limpia y profesional.",
     },
     tags: ["React", "TypeScript", "Astro", "Tailwind"],
     image: "/images/screenshot_portfolio.png",
