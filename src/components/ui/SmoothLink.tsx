@@ -6,6 +6,7 @@ interface SmoothLinkProps {
   children: ReactNode;
   className?: string;
   offset?: number;
+  onClick?: () => void;
 }
 
 export function SmoothLink({
@@ -13,6 +14,7 @@ export function SmoothLink({
   children,
   className,
   offset = -80,
+  onClick,
 }: SmoothLinkProps) {
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -22,6 +24,7 @@ export function SmoothLink({
         element.getBoundingClientRect().top + window.pageYOffset + offset;
       window.scrollTo({ top, behavior: "smooth" });
     }
+    onClick?.();
   };
 
   return (

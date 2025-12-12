@@ -72,7 +72,7 @@ export function Navbar() {
               ))}
               <li>
                 <a
-                  href="https://sneyder-chronicles.vercel.app/"
+                  href="https://blog.sneyderangulo.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-medium text-white/70 hover:text-white transition-colors duration-200"
@@ -119,7 +119,7 @@ export function Navbar() {
             ))}
             <li>
               <a
-                href="https://sneyder-chronicles.vercel.app/"
+                href="https://blog.sneyderangulo.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-2xl font-medium text-white/80 hover:text-white transition-colors"
