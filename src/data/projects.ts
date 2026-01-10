@@ -16,6 +16,20 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "bcv-rates",
+    title: "BCV Exchange Rates",
+    date: "2025",
+    description: {
+      en: "Web application for tracking and displaying Venezuelan Bolivar exchange rates from Banco Central de Venezuela. Built with modern web technologies for real-time currency information.",
+      es: "Aplicación web para rastrear y mostrar las tasas de cambio del Bolívar venezolano desde el Banco Central de Venezuela. Construida con tecnologías web modernas para información de divisas en tiempo real.",
+    },
+    tags: ["TypeScript", "React", "Node.js", "PostgreSQL", "Tailwind"],
+    image: "/images/screenshot_bcv_rates.png",
+    website: "https://cambio.sneyderangulo.com/",
+    githubRepo: "https://github.com/Sneyder2328/bcv-rates",
+    category: "web",
+  },
+  {
     id: "hello-cosmos",
     title: "Hello Cosmos!",
     date: "2025",
