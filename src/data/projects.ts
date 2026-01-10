@@ -18,7 +18,7 @@ export const projects: Project[] = [
   {
     id: "bcv-rates",
     title: "BCV Exchange Rates",
-    date: "2025",
+    date: "2026",
     description: {
       en: "Web application for tracking and displaying Venezuelan Bolivar exchange rates from Banco Central de Venezuela. Built with modern web technologies for real-time currency information.",
       es: "Aplicación web para rastrear y mostrar las tasas de cambio del Bolívar venezolano desde el Banco Central de Venezuela. Construida con tecnologías web modernas para información de divisas en tiempo real.",
@@ -44,7 +44,7 @@ export const projects: Project[] = [
   },
   {
     id: "tech-blog",
-    title: "Sneyder's Chronicles",
+    title: "Sneyder's Notes",
     date: "2025",
     description: {
       en: "Personal tech blog exploring web development, software architecture, and the latest in technology. Features thoughts, tutorials, and deep dives into tools and frameworks.",
