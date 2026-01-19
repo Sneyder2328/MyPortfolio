@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { clsx } from "clsx";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "../../context/LanguageContext";
+import { trackEvent } from "../../utils/analytics";
 import { LanguagePicker } from "./LanguagePicker";
 import { SmoothLink } from "../ui/SmoothLink";
 
@@ -49,6 +50,7 @@ export function Navbar() {
           <SmoothLink
             to="hero"
             className="text-lg font-semibold tracking-tight hover:opacity-80 transition-opacity"
+            onClick={() => trackEvent("nav_logo_click")}
           >
             <span className="font-bold">Sneyder</span>{" "}
             <span className="font-light">Angulo</span>
@@ -65,6 +67,9 @@ export function Navbar() {
                       "text-sm font-medium transition-colors duration-200",
                       "text-white/70 hover:text-white"
                     )}
+                    onClick={() =>
+                      trackEvent("nav_section_click", { section: item.to })
+                    }
                   >
                     {t(item.key)}
                   </SmoothLink>
@@ -76,6 +81,7 @@ export function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-medium text-white/70 hover:text-white transition-colors duration-200"
+                  onClick={() => trackEvent("nav_blog_click", { location: "desktop" })}
                 >
                   {t("nav.blog")}
                 </a>
@@ -87,7 +93,11 @@ export function Navbar() {
           {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2 -mr-2 text-white/80 hover:text-white transition-colors"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            onClick={() => {
+              const next = !isMobileMenuOpen;
+              setIsMobileMenuOpen(next);
+              trackEvent("nav_mobile_menu_toggle", { open: next });
+            }}
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -111,7 +121,10 @@ export function Navbar() {
                 <SmoothLink
                   to={item.to}
                   className="text-2xl font-medium text-white/80 hover:text-white transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={() => {
+                    trackEvent("nav_section_click", { section: item.to });
+                    setIsMobileMenuOpen(false);
+                  }}
                 >
                   {t(item.key)}
                 </SmoothLink>
@@ -123,6 +136,7 @@ export function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-2xl font-medium text-white/80 hover:text-white transition-colors"
+                onClick={() => trackEvent("nav_blog_click", { location: "mobile" })}
               >
                 {t("nav.blog")}
               </a>

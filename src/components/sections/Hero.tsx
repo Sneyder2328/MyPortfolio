@@ -1,5 +1,6 @@
 import { ChevronDown } from "lucide-react";
 import { useLanguage } from "../../context/LanguageContext";
+import { trackEvent } from "../../utils/analytics";
 import { Button } from "../ui/Button";
 import { SmoothLink } from "../ui/SmoothLink";
 
@@ -41,10 +42,20 @@ export function Hero() {
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up animation-delay-400">
-          <Button variant="primary" size="lg" href="#projects">
+          <Button
+            variant="primary"
+            size="lg"
+            href="#projects"
+            onClick={() => trackEvent("hero_view_work")}
+          >
             {t("hero.cta")}
           </Button>
-          <Button variant="secondary" size="lg" href="#contact">
+          <Button
+            variant="secondary"
+            size="lg"
+            href="#contact"
+            onClick={() => trackEvent("hero_get_in_touch")}
+          >
             {t("hero.contact")}
           </Button>
         </div>
@@ -54,6 +65,7 @@ export function Hero() {
       <SmoothLink
         to="projects"
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40 hover:text-white/60 transition-colors animate-fade-in animation-delay-500"
+        onClick={() => trackEvent("hero_scroll_to_projects")}
       >
         <span className="text-sm font-medium uppercase tracking-widest">
           Scroll

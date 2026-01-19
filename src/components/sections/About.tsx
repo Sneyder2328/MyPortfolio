@@ -1,5 +1,6 @@
 import { Download } from "lucide-react";
 import { useLanguage } from "../../context/LanguageContext";
+import { trackEvent } from "../../utils/analytics";
 import { Button } from "../ui/Button";
 import { AnimatedContainer } from "../ui/AnimatedContainer";
 
@@ -93,6 +94,7 @@ export function About() {
                 href={cvPath}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackEvent("about_view_cv", { language })}
               >
                 <Download size={18} />
                 {t("about.view_cv")}

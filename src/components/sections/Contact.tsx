@@ -11,24 +11,28 @@ import {
 } from "lucide-react";
 import { clsx } from "clsx";
 import { useLanguage } from "../../context/LanguageContext";
+import { trackEvent } from "../../utils/analytics";
 import { Button } from "../ui/Button";
 import { AnimatedContainer } from "../ui/AnimatedContainer";
 
 const CONTACT_INFO = [
   {
     icon: Mail,
+    analyticsId: "email",
     label: "contact.info.email",
     value: "sneyder2328@gmail.com",
     href: "mailto:sneyder2328@gmail.com",
   },
   {
     icon: Phone,
+    analyticsId: "phone",
     label: "contact.info.phone",
     value: "+58 412 555 1727",
     href: "tel:+584125551727",
   },
   {
     icon: MessageCircle,
+    analyticsId: "telegram",
     label: "Telegram",
     value: "@stas2328",
     href: "https://t.me/stas2328",
@@ -38,16 +42,19 @@ const CONTACT_INFO = [
 const SOCIAL_LINKS = [
   {
     name: "LinkedIn",
+    analyticsId: "linkedin",
     href: "https://www.linkedin.com/in/sneyder-angulo/",
     icon: Linkedin,
   },
   {
     name: "GitHub",
+    analyticsId: "github",
     href: "https://github.com/Sneyder2328",
     icon: Github,
   },
   {
     name: "Twitter",
+    analyticsId: "twitter",
     href: "https://twitter.com/SneyderHack",
     icon: Twitter,
   },
@@ -61,6 +68,7 @@ export function Contact() {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    trackEvent("contact_form_submit");
     setStatus("submitting");
 
     const form = e.currentTarget;
@@ -76,12 +84,15 @@ export function Contact() {
       });
 
       if (response.ok) {
+        trackEvent("contact_form_success");
         setStatus("success");
         form.reset();
       } else {
+        trackEvent("contact_form_error", { reason: "non_ok_response" });
         setStatus("error");
       }
     } catch {
+      trackEvent("contact_form_error", { reason: "network_error" });
       setStatus("error");
     }
   };
@@ -140,6 +151,11 @@ export function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 bg-zinc-950 border border-white/5 rounded-xl hover:border-white/10 hover:bg-zinc-900 transition-all duration-200"
+                  onClick={() =>
+                    trackEvent("contact_info_click", {
+                      method: item.analyticsId,
+                    })
+                  }
                 >
                   <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center">
                     <item.icon size={20} className="text-white/70" />
@@ -170,6 +186,11 @@ export function Contact() {
                     rel="noopener noreferrer"
                     className="w-12 h-12 rounded-xl bg-zinc-950 border border-white/5 flex items-center justify-center text-white/50 hover:text-white hover:border-white/10 hover:bg-zinc-900 transition-all duration-200"
                     aria-label={link.name}
+                    onClick={() =>
+                      trackEvent("contact_social_click", {
+                        network: link.analyticsId,
+                      })
+                    }
                   >
                     <link.icon size={20} />
                   </a>

@@ -1,23 +1,30 @@
 import { clsx } from "clsx";
-import type { ReactNode, ButtonHTMLAttributes } from "react";
+import type { ReactNode } from "react";
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+type ButtonBaseProps = {
   children: ReactNode;
   variant?: "primary" | "secondary" | "ghost";
   size?: "sm" | "md" | "lg";
-  href?: string;
-  target?: string;
-  rel?: string;
-}
+  className?: string;
+};
+
+type ButtonAsLinkProps = ButtonBaseProps &
+  React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+    href: string;
+  };
+
+type ButtonAsButtonProps = ButtonBaseProps &
+  React.ButtonHTMLAttributes<HTMLButtonElement> & {
+    href?: undefined;
+  };
+
+type ButtonProps = ButtonAsLinkProps | ButtonAsButtonProps;
 
 export function Button({
   children,
   variant = "primary",
   size = "md",
   className,
-  href,
-  target,
-  rel,
   ...props
 }: ButtonProps) {
   const baseStyles = clsx(
@@ -54,9 +61,10 @@ export function Button({
 
   const classes = clsx(baseStyles, variants[variant], sizes[size], className);
 
-  if (href) {
+  if ("href" in props) {
+    const { href, ...anchorProps } = props;
     return (
-      <a href={href} target={target} rel={rel} className={classes}>
+      <a href={href} className={classes} {...anchorProps}>
         {children}
       </a>
     );

@@ -3,6 +3,7 @@ import { clsx } from "clsx";
 import { useState, useRef, useEffect } from "react";
 import type { Project } from "../../data/projects";
 import { useLanguage } from "../../context/LanguageContext";
+import { trackEvent } from "../../utils/analytics";
 import { AnimatedContainer } from "../ui/AnimatedContainer";
 
 interface ProjectCardProps {
@@ -116,6 +117,13 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-white/5 hover:bg-white/10 rounded-lg transition-colors"
+              onClick={() =>
+                trackEvent("project_live_demo", {
+                  projectId: project.id,
+                  projectTitle: project.title,
+                  category: project.category,
+                })
+              }
             >
               <ExternalLink size={16} />
               {t("projects.see_live")}
@@ -127,6 +135,13 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-white/5 hover:bg-white/10 rounded-lg transition-colors"
+              onClick={() =>
+                trackEvent("project_get_app", {
+                  projectId: project.id,
+                  projectTitle: project.title,
+                  category: project.category,
+                })
+              }
             >
               <Smartphone size={16} />
               {t("projects.get_app")}
@@ -138,6 +153,13 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white/60 hover:text-white bg-transparent hover:bg-white/5 rounded-lg transition-colors"
+              onClick={() =>
+                trackEvent("project_source_code", {
+                  projectId: project.id,
+                  projectTitle: project.title,
+                  category: project.category,
+                })
+              }
             >
               <Github size={16} />
               {t("projects.github_repo")}

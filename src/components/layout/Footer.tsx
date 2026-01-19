@@ -1,24 +1,29 @@
 import { Github, Linkedin, Twitter, Mail } from "lucide-react";
 import { useLanguage } from "../../context/LanguageContext";
+import { trackEvent } from "../../utils/analytics";
 
 const SOCIAL_LINKS = [
   {
     name: "LinkedIn",
+    analyticsId: "linkedin",
     href: "https://www.linkedin.com/in/sneyder-angulo/",
     icon: Linkedin,
   },
   {
     name: "GitHub",
+    analyticsId: "github",
     href: "https://github.com/Sneyder2328",
     icon: Github,
   },
   {
     name: "Twitter",
+    analyticsId: "twitter",
     href: "https://twitter.com/SneyderHack",
     icon: Twitter,
   },
   {
     name: "Email",
+    analyticsId: "email",
     href: "mailto:sneyder2328@gmail.com",
     icon: Mail,
   },
@@ -53,6 +58,9 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="p-2 text-white/50 hover:text-white transition-colors duration-200"
                 aria-label={link.name}
+                onClick={() =>
+                  trackEvent("footer_social_click", { network: link.analyticsId })
+                }
               >
                 <link.icon size={20} />
               </a>
