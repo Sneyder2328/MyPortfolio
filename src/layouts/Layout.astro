@@ -1,6 +1,4 @@
 ---
-import Analytics from '@vercel/analytics/astro'
-
 interface Props {
   title?: string;
   description?: string;
@@ -64,7 +62,14 @@ const ogImage = `${siteUrl}/meta.jpg`;
         font-family: var(--font-sans);
       }
     </style>
-    <Analytics />
+
+    <!-- Umami Analytics -->
+    <script
+      async
+      defer
+      data-website-id="ba5839db-6d23-40cc-805e-9b17b7a6da5e"
+      src="https://analytics.sneyderangulo.com/script.js"
+    ></script>
   </head>
   <body class="bg-black text-white antialiased">
     <slot />
