@@ -24,7 +24,7 @@ export const es: Record<TranslationKey, string> = {
 
   // Projects
   "projects.title": "Proyectos Destacados",
-  "projects.subtitle": "Una selección de mi trabajo reciente",
+  "projects.subtitle": "Algunos de mis proyectos personales",
   "projects.see_live": "Ver Demo",
   "projects.github_repo": "Código Fuente",
   "projects.get_app": "Obtener App",

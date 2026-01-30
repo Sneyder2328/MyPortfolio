@@ -20,7 +20,7 @@ export const en = {
 
   // Projects
   "projects.title": "Featured Projects",
-  "projects.subtitle": "A selection of my recent work",
+  "projects.subtitle": "Some of my personal projects",
   "projects.see_live": "Live Demo",
   "projects.github_repo": "Source Code",
   "projects.get_app": "Get App",
