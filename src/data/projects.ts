@@ -71,6 +71,19 @@ export const projects: Project[] = [
     category: "web",
   },
   {
+    id: "las-lobas-tours",
+    title: "Las Lobas Tours",
+    date: "2025",
+    description: {
+      en: "Responsive landing page for a Venezuelan tour transportation company. Built with Next.js 15 (App Router), React 19, TypeScript, and Tailwind CSS 4. Features animated service cards, customer testimonials, TikTok embeds, Google Maps integration, and WhatsApp booking functionality.",
+      es: "Landing page responsiva para una empresa de transporte turístico venezolana. Construida con Next.js 15 (App Router), React 19, TypeScript y Tailwind CSS 4. Incluye tarjetas de servicios animadas, testimonios de clientes, embeds de TikTok, integración con Google Maps y funcionalidad de reservas por WhatsApp.",
+    },
+    tags: ["Next.js", "React", "TypeScript", "Tailwind"],
+    image: "/images/screenshot_las_lobas_tours.jpg",
+    website: "https://laslobastours.com/",
+    category: "web",
+  },
+  {
     id: "la-social-network",
     title: "LaSocialNetwork",
     date: "2020",
