@@ -67,7 +67,7 @@ export const projects: Project[] = [
     tags: ["React", "TypeScript", "Astro", "Tailwind"],
     image: "/images/screenshot_portfolio.png",
     website: "/",
-    githubRepo: "https://github.com/Sneyder2328/MyPorfolio",
+    githubRepo: "https://github.com/Sneyder2328/MyPortfolio",
     category: "web",
   },
   {
