@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy – El Cambio</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 1rem;
+        color: #222;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        margin-top: 2rem;
+        font-size: 1.3rem;
+      }
+      h3 {
+        font-size: 1.1rem;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 1rem 0;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 0.5rem;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background-color: #f5f5f5;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Privacy Policy</h1>
+
+    <p><strong>Last updated:</strong> February 7, 2026</p>
+
+    <p>
+      This Privacy Policy describes how <strong>El Cambio</strong> ("we", "us",
+      or "our") handles information when you use the El Cambio mobile application
+      (the "App"). The App displays exchange-rate information published by the
+      Central Bank of Venezuela (BCV) and lets you save custom exchange rates for
+      personal reference.
+    </p>
+
+    <h2>1. Information We Collect</h2>
+
+    <h3>1.1 Account Information (when you sign up or log in)</h3>
+    <p>
+      If you create an account, we collect the information needed to authenticate
+      you. The specific data depends on the sign-in method you choose:
+    </p>
+    <ul>
+      <li>
+        <strong>Email &amp; password:</strong> Your email address and a hashed
+        password, managed by Firebase Authentication (Google).
+      </li>
+      <li>
+        <strong>Google Sign-In:</strong> Your email address, display name, and
+        profile photo URL, as provided by your Google account through Firebase
+        Authentication.
+      </li>
+    </ul>
+    <p>
+      A unique user identifier (Firebase UID) is generated for your account and
+      used to associate your custom rates with your profile.
+    </p>
+
+    <h3>1.2 Custom Exchange Rates</h3>
+    <p>
+      When you create custom exchange rates, we store the label you assign
+      (up to 16 characters), the rate value, and timestamps (created/updated) on
+      our server, linked to your Firebase UID.
+    </p>
+
+    <h3>1.3 Usage Analytics (Umami)</h3>
+    <p>
+      We use <strong>Umami</strong>, a privacy-focused analytics service, to
+      understand how the App is used and to improve it. Umami collects:
+    </p>
+    <ul>
+      <li>
+        <strong>App usage events</strong> — such as screen views, sign-in
+        method chosen, rates loaded, custom rate actions, and settings
+        interactions. No personally identifiable information is included in
+        event data.
+      </li>
+      <li>
+        <strong>Device metadata</strong> — screen dimensions, operating system
+        name and version, and device language/locale.
+      </li>
+      <li>
+        <strong>Anonymous identifier</strong> — a randomly generated UUID stored
+        locally on your device, not linked to your identity.
+      </li>
+    </ul>
+    <p>
+      Umami does not use cookies, does not track you across apps or websites,
+      and does not collect IP addresses for profiling. Analytics collection can
+      be toggled off.
+    </p>
+
+    <h3>1.4 Locally Stored Data</h3>
+    <p>
+      The App stores certain data on your device to provide offline access and a
+      faster experience:
+    </p>
+    <ul>
+      <li>
+        <strong>Authentication tokens</strong> — Firebase session tokens so you
+        stay signed in between launches.
+      </li>
+      <li>
+        <strong>Cached exchange rates</strong> — recent rate data (official and
+        custom) cached for up to 30 days. This cache is cleared when you sign
+        out.
+      </li>
+      <li>
+        <strong>Analytics identifier</strong> — the anonymous UUID described in
+        section 1.3.
+      </li>
+    </ul>
+
+    <h3>1.5 Information We Do NOT Collect</h3>
+    <p>The App does <strong>not</strong> collect:</p>
+    <ul>
+      <li>Precise or approximate location data</li>
+      <li>Contacts, call logs, or SMS</li>
+      <li>Photos, videos, or files (beyond what you explicitly provide)</li>
+      <li>Financial or payment information</li>
+      <li>Health, fitness, or biometric data</li>
+      <li>Device advertising identifiers</li>
+      <li>Microphone or camera input</li>
+    </ul>
+
+    <h2>2. How We Use Information</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Account information (email, name, photo)</td>
+          <td>
+            Authenticate you and display your profile inside the App.
+          </td>
+        </tr>
+        <tr>
+          <td>Firebase UID</td>
+          <td>Link your custom rates to your account on our server.</td>
+        </tr>
+        <tr>
+          <td>Custom exchange rates</td>
+          <td>
+            Store, retrieve, and sync the custom rates you create so they are
+            available across sessions and devices.
+          </td>
+        </tr>
+        <tr>
+          <td>Usage analytics</td>
+          <td>
+            Understand feature usage, diagnose errors, and improve the App
+            experience. Analytics are aggregated and not used to identify
+            individual users.
+          </td>
+        </tr>
+        <tr>
+          <td>Cached data &amp; auth tokens</td>
+          <td>
+            Provide offline access to rates and keep you signed in between app
+            launches.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>3. Third-Party Services</h2>
+
+    <p>
+      We rely on the following third-party services, each of which processes some
+      data on our behalf:
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Provider</th>
+          <th>Data processed</th>
+          <th>Privacy policy</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Firebase Authentication</td>
+          <td>Google LLC</td>
+          <td>
+            Email, display name, photo URL, UID, auth tokens
+          </td>
+          <td>
+            <a
+              href="https://firebase.google.com/support/privacy"
+              target="_blank"
+              rel="noopener"
+              >firebase.google.com/support/privacy</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>Google Sign-In</td>
+          <td>Google LLC</td>
+          <td>
+            Google account profile data used for authentication
+          </td>
+          <td>
+            <a
+              href="https://policies.google.com/privacy"
+              target="_blank"
+              rel="noopener"
+              >policies.google.com/privacy</a
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>Umami Analytics</td>
+          <td>Self-hosted</td>
+          <td>
+            Anonymous usage events, device metadata (screen size, OS, locale)
+          </td>
+          <td>
+            <a
+              href="https://umami.is/privacy"
+              target="_blank"
+              rel="noopener"
+              >umami.is/privacy</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>4. Data Sharing</h2>
+
+    <ul>
+      <li>
+        <strong>We do not sell your personal information</strong> to any third
+        party.
+      </li>
+      <li>
+        <strong>We do not share data for advertising purposes.</strong>
+      </li>
+      <li>
+        Account and authentication data is processed by
+        <strong>Firebase / Google</strong> solely for the purpose of
+        authenticating you.
+      </li>
+      <li>
+        Anonymized usage data is sent to our <strong>Umami</strong> analytics
+        instance to help us improve the App.
+      </li>
+      <li>
+        We may disclose information if required by law or to protect rights,
+        safety, or property.
+      </li>
+    </ul>
+
+    <h2>5. Data Retention</h2>
+
+    <ul>
+      <li>
+        <strong>Account data:</strong> Retained in Firebase for as long as your
+        account exists. You may request account deletion (see section 7).
+      </li>
+      <li>
+        <strong>Custom rates:</strong> Stored on our server until you delete them
+        or request account deletion.
+      </li>
+      <li>
+        <strong>Analytics data:</strong> Retained in our Umami instance in
+        aggregated, anonymized form. Individual events cannot be traced back to
+        you.
+      </li>
+      <li>
+        <strong>Local cache:</strong> Automatically expires after 30 days and is
+        also cleared when you sign out.
+      </li>
+    </ul>
+
+    <h2>6. Data Security</h2>
+
+    <p>
+      We use reasonable technical and organizational measures to protect your
+      data, including:
+    </p>
+    <ul>
+      <li>
+        All network communication between the App and our servers uses HTTPS
+        (TLS encryption).
+      </li>
+      <li>
+        Authentication is handled by Firebase, which employs industry-standard
+        security practices.
+      </li>
+      <li>
+        Passwords are never stored in plain text; they are managed entirely by
+        Firebase Authentication.
+      </li>
+    </ul>
+    <p>
+      No method of electronic transmission or storage is 100% secure. While we
+      strive to protect your data, we cannot guarantee absolute security.
+    </p>
+
+    <h2>7. Your Rights and Choices</h2>
+
+    <ul>
+      <li>
+        <strong>Sign out:</strong> You can sign out at any time from the App
+        settings. This clears locally cached data and auth tokens.
+      </li>
+      <li>
+        <strong>Delete custom rates:</strong> You can delete any custom rates
+        you created directly in the App.
+      </li>
+      <li>
+        <strong>Account deletion:</strong> You may request deletion of your
+        account and all associated data by contacting us at the email below. We
+        will process your request within 30 days.
+      </li>
+      <li>
+        <strong>Access and portability:</strong> You may request a copy of the
+        personal data we hold about you.
+      </li>
+    </ul>
+
+    <h2>8. Children's Privacy</h2>
+
+    <p>
+      The App is not directed to children under the age of 13. We do not
+      knowingly collect personal information from children under 13. If you
+      believe a child has provided us with personal information, please contact
+      us so we can delete it.
+    </p>
+
+    <h2>9. International Transfers</h2>
+
+    <p>
+      Your data may be processed on servers located outside your country of
+      residence. Firebase services are operated by Google and may process data in
+      various regions. By using the App, you consent to the transfer of your
+      information to these locations.
+    </p>
+
+    <h2>10. Changes to This Policy</h2>
+
+    <p>
+      We may update this Privacy Policy from time to time. When we do, we will
+      revise the "Last updated" date at the top. We encourage you to review this
+      policy periodically.
+    </p>
+
+    <h2>11. Contact Us</h2>
+
+    <p>
+      If you have questions about this Privacy Policy or wish to exercise any of
+      your rights, please contact us:
+    </p>
+    <p>
+      Email:
+      <a href="mailto:sneyderangulo@gmail.com">sneyderangulo@gmail.com</a>
+    </p>
+  </body>
+</html>
