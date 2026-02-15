@@ -30,6 +30,27 @@ export const projects: Project[] = [
     category: "web",
   },
   {
+    id: "cuadralo-app",
+    title: "Cuadralo.app",
+    date: "2026",
+    description: {
+      en: "Transport marketplace MVP that connects clients who need private group transportation with verified providers. Built as a monorepo with client/provider web app, admin backoffice, API, and shared domain rules for onboarding, vehicle management, and quote workflows.",
+      es: "MVP de marketplace de transporte que conecta clientes que necesitan transporte grupal privado con proveedores verificados. Construido como monorepo con app web de clientes/proveedores, backoffice administrativo, API y reglas de dominio compartidas para onboarding, gestión de vehículos y flujos de cotizaciones.",
+    },
+    tags: [
+      "TypeScript",
+      "React",
+      "NestJS",
+      "tRPC",
+      "Prisma",
+      "PostgreSQL",
+      "Firebase",
+    ],
+    image: "/images/screenshot_cuadralo.jpg",
+    website: "https://cuadralo.app/",
+    category: "web",
+  },
+  {
     id: "hello-cosmos",
     title: "Hello Cosmos!",
     date: "2025",
