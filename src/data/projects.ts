@@ -16,6 +16,19 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: "finve",
+    title: "Finve",
+    date: "2026",
+    description: {
+      en: "Investment and portfolio tracking web app that lets users monitor their holdings, follow market movements, and stay on top of their investments from a clean, responsive interface.",
+      es: "Aplicación web de seguimiento de inversiones y portafolio que permite a los usuarios monitorear sus activos, seguir los movimientos del mercado y mantener el control de sus inversiones desde una interfaz limpia y responsiva.",
+    },
+    tags: ["TypeScript", "React", "NestJS", "PostgreSQL"],
+    image: "/images/screenshot_finve.png",
+    website: "https://www.finve.net/",
+    category: "web",
+  },
+  {
     id: "bcv-rates",
     title: "El Cambio",
     date: "2026",
