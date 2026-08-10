@@ -36,8 +36,8 @@ const contactChannels = (language: "en" | "es") => [
     icon: Phone,
     analyticsId: "phone",
     label: "contact.info.phone",
-    value: "+58 412 555 1727",
-    href: "tel:+584125551727",
+    value: "+58 414 555 1727",
+    href: "tel:+584145551727",
   },
   {
     icon: Send,
