@@ -31,9 +31,17 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY) as Language | null;
-    if (stored && (stored === "en" || stored === "es")) {
-      setLanguageState(stored);
-    }
+    // Most prospects are Spanish speakers, so fall back to the browser's
+    // language before defaulting — a stored choice always wins.
+    const resolved: Language =
+      stored === "en" || stored === "es"
+        ? stored
+        : navigator.language.toLowerCase().startsWith("es")
+          ? "es"
+          : DEFAULT_LANGUAGE;
+
+    setLanguageState(resolved);
+    document.documentElement.lang = resolved;
     setIsHydrated(true);
   }, []);
 

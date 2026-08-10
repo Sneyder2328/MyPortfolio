@@ -43,6 +43,13 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent" />
 
+        {/* Client Work Badge */}
+        {project.clientWork && (
+          <span className="absolute top-4 left-4 px-3 py-1 text-xs font-semibold rounded-full bg-white text-black">
+            {t("projects.client_badge")}
+          </span>
+        )}
+
         {/* Category Badge */}
         <span
           className={clsx(

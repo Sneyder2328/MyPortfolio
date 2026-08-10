@@ -2,29 +2,51 @@ import type { TranslationKey } from "./en";
 
 export const es: Record<TranslationKey, string> = {
   // Meta
-  title: "Sneyder Angulo | Desarrollador de Software",
+  title: "Sneyder Angulo | Software a la medida para tu negocio",
   description:
-    "Desarrollador de software especializado en aplicaciones web y móviles",
+    "Desarrollo de software a la medida para consultorios, gimnasios y distribuidoras en Barquisimeto. Agenda, pedidos, cobros y reportes en un solo sistema.",
 
   // Navigation
   "nav.home": "Inicio",
-  "nav.projects": "Proyectos",
+  "nav.services": "Servicios",
+  "nav.projects": "Trabajo",
   "nav.about": "Sobre mí",
   "nav.blog": "Blog",
   "nav.contact": "Contacto",
 
   // Hero
-  "hero.greeting": "Hola, soy",
   "hero.name": "Sneyder Angulo",
-  "hero.role": "Desarrollador de Software",
+  "hero.role": "Desarrollador de software",
+  "hero.headline": "Software a la medida para negocios que ya no caben en un Excel",
   "hero.description":
-    "Creando experiencias web de calidad con pasión y atención al detalle",
-  "hero.cta": "Ver Mi Trabajo",
-  "hero.contact": "Contáctame",
+    "Agenda, pedidos, cobros y reportes en un solo sistema, construido alrededor de cómo trabaja tu negocio de verdad.",
+  "hero.cta": "Ver qué construyo",
+  "hero.contact": "Escríbeme por WhatsApp",
+  "hero.location": "Barquisimeto, Venezuela — también remoto",
+
+  // Services
+  "services.title": "Qué construyo",
+  "services.subtitle":
+    "Software hecho alrededor de cómo trabaja tu negocio de verdad, no al revés.",
+  "services.process_title": "Cómo trabajo",
+  "services.process_subtitle":
+    "Sin paquetes cerrados. Cada proyecto se cotiza según su propio caso, y empieza por entender tu operación.",
+  "services.audience_title": "Algunos de los negocios con los que trabajo",
+  "services.audience_note":
+    "¿No ves tu rubro aquí? Conversemos igual — en el fondo, el problema suele ser el mismo.",
+  "services.honest_label": "Una respuesta honesta",
+  "services.honest_body":
+    "¿No estás seguro de necesitar algo a la medida? Te lo digo en la primera llamada. Si una herramienta que ya existe te resuelve el problema, te ayudo a montarla y listo.",
+  "services.diagnosis_label": "Diagnóstico gratis",
+  "services.diagnosis_body":
+    "45 minutos para entender cómo trabajas hoy. Después te mando por escrito qué está perdiendo tu negocio y qué haría yo al respecto, en orden de prioridad. Sin compromiso.",
+  "services.diagnosis_cta": "Agendar el diagnóstico",
 
   // Projects
-  "projects.title": "Proyectos Destacados",
-  "projects.subtitle": "Algunos de mis proyectos personales",
+  "projects.title": "Trabajo reciente",
+  "projects.subtitle":
+    "Proyectos de clientes y productos propios: diseñados, construidos y puestos en producción.",
+  "projects.client_badge": "Cliente",
   "projects.see_live": "Ver Demo",
   "projects.github_repo": "Código Fuente",
   "projects.get_app": "Obtener App",
@@ -35,20 +57,20 @@ export const es: Record<TranslationKey, string> = {
   // About
   "about.title": "Sobre Mí",
   "about.bio":
-    "Comencé a programar a los 14 años por pura curiosidad, y rápidamente se convirtió en una pasión de vida. Valoro el buen oficio, el código limpio y el crecimiento continuo, y también doy mucha importancia al valor de negocio detrás del software. Para mí el código tiene sentido cuando resuelve problemas reales para personas reales. Me especializo en desarrollo web moderno y disfruto crear aplicaciones full-stack usando tecnologías como React y Node.js",
+    "Comencé a programar a los 14 años por pura curiosidad, y rápidamente se convirtió en una pasión de vida. Valoro el buen oficio, el código limpio y el crecimiento continuo, y también doy mucha importancia al valor de negocio detrás del software. Para mí el código tiene sentido cuando resuelve problemas reales para personas reales — por eso hoy construyo sistemas para negocios de Barquisimeto que necesitan software hecho a la forma en que realmente operan.",
   "about.skills": "Tecnologías",
   "about.view_cv": "Descargar CV",
   "about.experience": "Experiencia",
   "about.years": "Años de Experiencia",
 
   // Contact
-  "contact.title": "Contacto",
-  "contact.subtitle": "Trabajemos juntos",
+  "contact.title": "Hablemos",
+  "contact.subtitle": "Diagnóstico gratis, sin compromiso",
   "contact.description":
-    "Envíe un mensaje en general o con los detalles de algún proyecto del que le gustaría que forme parte y me pondré en contacto con usted tan pronto como sea posible.",
+    "Cuéntame cómo manejas hoy tus citas, pedidos o cobros. Te respondo en menos de 24 horas y agendamos 45 minutos para revisarlo juntos.",
   "contact.form.name": "Nombre",
   "contact.form.email": "Correo electrónico",
-  "contact.form.message": "Mensaje",
+  "contact.form.message": "¿A qué se dedica tu negocio y qué te está quitando tiempo?",
   "contact.form.send": "Enviar Mensaje",
   "contact.form.sending": "Enviando...",
   "contact.form.success":
@@ -63,4 +85,3 @@ export const es: Record<TranslationKey, string> = {
   "footer.designed": "Diseñado y construido por",
   "footer.rights": "Todos los derechos reservados",
 };
-

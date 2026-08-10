@@ -5,8 +5,8 @@ interface Props {
 }
 
 const {
-  title = "Sneyder Angulo | Software Developer",
-  description = "Software developer specialized in web and mobile applications. Building elegant solutions for web and mobile platforms.",
+  title = "Sneyder Angulo | Software a la medida para tu negocio",
+  description = "Desarrollo de software a la medida en Barquisimeto. Agenda, pedidos, cobros y reportes en un solo sistema para consultorios, gimnasios y distribuidoras.",
 } = Astro.props;
 
 const siteUrl = "https://sneyderangulo.com";
@@ -15,7 +15,7 @@ const isProd = import.meta.env.PROD;
 ---
 
 <!doctype html>
-<html lang="en" class="dark">
+<html lang="es" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,6 +30,7 @@ const isProd = import.meta.env.PROD;
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_VE" />
     <meta property="og:url" content={siteUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
