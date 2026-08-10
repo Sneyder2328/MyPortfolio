@@ -7,6 +7,7 @@ import { LanguagePicker } from "./LanguagePicker";
 import { SmoothLink } from "../ui/SmoothLink";
 
 const NAV_ITEMS = [
+  { key: "nav.services", to: "services" },
   { key: "nav.projects", to: "projects" },
   { key: "nav.about", to: "about" },
   { key: "nav.contact", to: "contact" },

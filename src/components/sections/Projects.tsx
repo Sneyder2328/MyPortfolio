@@ -3,6 +3,12 @@ import { useLanguage } from "../../context/LanguageContext";
 import { ProjectCard } from "./ProjectCard";
 import { AnimatedContainer } from "../ui/AnimatedContainer";
 
+/** Client work leads the grid; everything else keeps its authored order. */
+const orderedProjects = [
+  ...projects.filter((project) => project.clientWork),
+  ...projects.filter((project) => !project.clientWork),
+];
+
 export function Projects() {
   const { t } = useLanguage();
 
@@ -24,7 +30,7 @@ export function Projects() {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-          {projects.map((project, index) => (
+          {orderedProjects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>

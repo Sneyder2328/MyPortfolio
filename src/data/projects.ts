@@ -12,6 +12,8 @@ export interface Project {
   githubRepo?: string;
   googlePlay?: string;
   category: "web" | "android";
+  /** Built for a paying client. Surfaces a badge and sorts the project first. */
+  clientWork?: boolean;
 }
 
 export const projects: Project[] = [
@@ -116,6 +118,7 @@ export const projects: Project[] = [
     image: "/images/screenshot_las_lobas_tours.jpg",
     website: "https://laslobastours.com/",
     category: "web",
+    clientWork: true,
   },
   {
     id: "la-social-network",

@@ -12,10 +12,19 @@ import {
 import { clsx } from "clsx";
 import { useLanguage } from "../../context/LanguageContext";
 import { trackEvent } from "../../utils/analytics";
+import { whatsappLink } from "../../data/contact";
 import { Button } from "../ui/Button";
 import { AnimatedContainer } from "../ui/AnimatedContainer";
 
-const CONTACT_INFO = [
+/** WhatsApp leads: it is how business owners here actually start a conversation. */
+const contactChannels = (language: "en" | "es") => [
+  {
+    icon: MessageCircle,
+    analyticsId: "whatsapp",
+    label: "WhatsApp",
+    value: "+58 412 555 1727",
+    href: whatsappLink(language),
+  },
   {
     icon: Mail,
     analyticsId: "email",
@@ -31,7 +40,7 @@ const CONTACT_INFO = [
     href: "tel:+584125551727",
   },
   {
-    icon: MessageCircle,
+    icon: Send,
     analyticsId: "telegram",
     label: "Telegram",
     value: "@stas2328",
@@ -63,8 +72,9 @@ const SOCIAL_LINKS = [
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
 export function Contact() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const [status, setStatus] = useState<FormStatus>("idle");
+  const channels = contactChannels(language);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -144,9 +154,9 @@ export function Contact() {
             </div>
 
             <div className="space-y-4">
-              {CONTACT_INFO.map((item) => (
+              {channels.map((item) => (
                 <a
-                  key={item.value}
+                  key={item.analyticsId}
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
