@@ -17,7 +17,7 @@ export const en = {
   "hero.role": "Software developer",
   "hero.headline": "Custom software for businesses that have outgrown a spreadsheet",
   "hero.description":
-    "Scheduling, orders, collections and reports in a single system, built around how your business actually works.",
+    "Scheduling, orders, collections and reports in a single system, built around how your business works.",
   "hero.cta": "See what I build",
   "hero.contact": "Write me on WhatsApp",
   "hero.location": "Barquisimeto, Venezuela — also remote",
@@ -25,10 +25,8 @@ export const en = {
   // Services
   "services.title": "What I build",
   "services.subtitle":
-    "Software shaped around how your business actually works — not the other way around.",
+    "From a landing page to the system that runs your whole operation.",
   "services.process_title": "How I work",
-  "services.process_subtitle":
-    "No closed packages. Every project is scoped and priced for its own case, and it starts by understanding your operation.",
   "services.audience_title": "Some of the businesses I work with",
   "services.audience_note":
     "Don't see your line of work here? Let's talk anyway — underneath, the problem is usually the same one.",

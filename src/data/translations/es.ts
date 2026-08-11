@@ -19,7 +19,7 @@ export const es: Record<TranslationKey, string> = {
   "hero.role": "Desarrollador de software",
   "hero.headline": "Software a la medida para negocios que ya no caben en un Excel",
   "hero.description":
-    "Agenda, pedidos, cobros y reportes en un solo sistema, construido alrededor de cómo trabaja tu negocio de verdad.",
+    "Agenda, pedidos, cobros y reportes en un solo sistema, construido alrededor de cómo trabaja tu negocio.",
   "hero.cta": "Ver qué construyo",
   "hero.contact": "Escríbeme por WhatsApp",
   "hero.location": "Barquisimeto, Venezuela — también remoto",
@@ -27,10 +27,8 @@ export const es: Record<TranslationKey, string> = {
   // Services
   "services.title": "Qué construyo",
   "services.subtitle":
-    "Software hecho alrededor de cómo trabaja tu negocio de verdad, no al revés.",
+    "Desde una landing hasta el sistema que mueve toda tu operación.",
   "services.process_title": "Cómo trabajo",
-  "services.process_subtitle":
-    "Sin paquetes cerrados. Cada proyecto se cotiza según su propio caso, y empieza por entender tu operación.",
   "services.audience_title": "Algunos de los negocios con los que trabajo",
   "services.audience_note":
     "¿No ves tu rubro aquí? Conversemos igual — en el fondo, el problema suele ser el mismo.",

@@ -117,8 +117,8 @@ export const processSteps: ProcessStep[] = [
       es: "Propuesta hecha para ti",
     },
     description: {
-      en: "Scope, timeline and price in writing, worked out for your situation. No closed packages — what you need is what you pay for.",
-      es: "Alcance, tiempo y precio por escrito, calculados para tu situación. Sin paquetes cerrados: pagas por lo que necesitas.",
+      en: "Scope, timeline and price in writing, worked out for your operation and your budget.",
+      es: "Alcance, tiempo y precio por escrito, calculados para tu operación y tu presupuesto.",
     },
   },
   {
