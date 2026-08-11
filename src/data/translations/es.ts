@@ -19,7 +19,7 @@ export const es: Record<TranslationKey, string> = {
   "hero.role": "Desarrollador de software",
   "hero.headline": "Software a la medida para negocios que ya no caben en un Excel",
   "hero.description":
-    "Agenda, pedidos, cobros y reportes en un solo sistema, construido alrededor de cómo trabaja tu negocio.",
+    "Si hoy lo resuelves a mano, en un cuaderno o repitiendo lo mismo por WhatsApp, se puede construir algo mejor.",
   "hero.cta": "Ver qué construyo",
   "hero.contact": "Escríbeme por WhatsApp",
   "hero.location": "Barquisimeto, Venezuela — también remoto",

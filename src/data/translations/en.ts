@@ -17,7 +17,7 @@ export const en = {
   "hero.role": "Software developer",
   "hero.headline": "Custom software for businesses that have outgrown a spreadsheet",
   "hero.description":
-    "Scheduling, orders, collections and reports in a single system, built around how your business works.",
+    "If you handle it by hand today — on paper, or by repeating the same WhatsApp messages — there's something better to build.",
   "hero.cta": "See what I build",
   "hero.contact": "Write me on WhatsApp",
   "hero.location": "Barquisimeto, Venezuela — also remote",

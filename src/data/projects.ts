@@ -191,19 +191,5 @@ export const projects: Project[] = [
       "https://play.google.com/store/apps/details?id=com.twismart.usconstitution",
     category: "android",
   },
-  {
-    id: "tic-tac-toe",
-    title: "Tic Tac Toe Game",
-    date: "2017",
-    description: {
-      en: "Mobile version of the popular game Tic Tac Toe, made several years ago while learning the basics of Android app development.",
-      es: "Versión móvil del popular juego Tres en Raya, realizado hace ya varios años mientras aprendía las bases del desarrollo de apps Android.",
-    },
-    tags: ["Java", "Android"],
-    image: "/images/screenshot_tic_tac_toe.png",
-    googlePlay:
-      "https://play.google.com/store/apps/details?id=com.twismart.games.tictactoe",
-    category: "android",
-  },
 ];
 
