@@ -9,7 +9,6 @@ export const en = {
   "nav.services": "Services",
   "nav.projects": "Work",
   "nav.about": "About",
-  "nav.blog": "Blog",
   "nav.contact": "Contact",
 
   // Hero

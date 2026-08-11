@@ -11,7 +11,6 @@ export const es: Record<TranslationKey, string> = {
   "nav.services": "Servicios",
   "nav.projects": "Trabajo",
   "nav.about": "Sobre mí",
-  "nav.blog": "Blog",
   "nav.contact": "Contacto",
 
   // Hero
