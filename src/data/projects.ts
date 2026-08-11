@@ -79,20 +79,6 @@ export const projects: Project[] = [
     category: "web",
   },
   {
-    id: "tech-blog",
-    title: "Sneyder's Notes",
-    date: "2025",
-    description: {
-      en: "Personal tech blog exploring web development, software architecture, and the latest in technology. Features thoughts, tutorials, and deep dives into tools and frameworks.",
-      es: "Blog personal de tecnología explorando desarrollo web, arquitectura de software y las últimas tendencias. Incluye tutoriales y análisis profundos sobre herramientas y frameworks.",
-    },
-    tags: ["React", "TypeScript", "Astro", "MDX"],
-    image: "/images/screenshot_tech_blog.png",
-    website: "https://sneyder-chronicles.vercel.app/",
-    githubRepo: "https://github.com/Sneyder2328/tech-blog",
-    category: "web",
-  },
-  {
     id: "portfolio",
     title: "Portfolio Website",
     date: "2025",
@@ -162,19 +148,6 @@ export const projects: Project[] = [
     googlePlay:
       "https://play.google.com/store/apps/details?id=com.sneyder.cryptotracker",
     githubRepo: "https://github.com/Sneyder2328/CryptoTracker",
-    category: "android",
-  },
-  {
-    id: "barca-fans-club",
-    title: "BarcaFansClub",
-    date: "2018",
-    description: {
-      en: "Social network designed around the FC Barcelona fans theming, with integrated News and La Liga's table sections.",
-      es: "Red social con temática del FC Barcelona, además de las funciones típicas de una RRSS la misma incluye la tabla de posiciones de la liga española e información relevante sobre el club.",
-    },
-    tags: ["Kotlin", "Firebase", "DynamoDB"],
-    image: "/images/barcafansclub1.jpg",
-    githubRepo: "https://github.com/Sneyder2328/BarcaFansClub",
     category: "android",
   },
   {

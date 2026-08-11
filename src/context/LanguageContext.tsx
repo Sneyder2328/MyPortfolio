@@ -25,20 +25,34 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
 const STORAGE_KEY = "portfolio-language";
 const DEFAULT_LANGUAGE: Language = "en";
 
+/**
+ * Venezuela is the target market, so a visitor there gets Spanish even on a
+ * device configured in English — imported phones and technical users are
+ * common enough that browser language alone misses real prospects.
+ */
+function detectLanguage(): Language {
+  if (navigator.language.toLowerCase().startsWith("es")) return "es";
+
+  try {
+    if (Intl.DateTimeFormat().resolvedOptions().timeZone === "America/Caracas") {
+      return "es";
+    }
+  } catch {
+    // Intl unavailable: fall through to the default.
+  }
+
+  return DEFAULT_LANGUAGE;
+}
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>(DEFAULT_LANGUAGE);
   const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY) as Language | null;
-    // Most prospects are Spanish speakers, so fall back to the browser's
-    // language before defaulting — a stored choice always wins.
+    // A choice the visitor made themselves always wins over detection.
     const resolved: Language =
-      stored === "en" || stored === "es"
-        ? stored
-        : navigator.language.toLowerCase().startsWith("es")
-          ? "es"
-          : DEFAULT_LANGUAGE;
+      stored === "en" || stored === "es" ? stored : detectLanguage();
 
     setLanguageState(resolved);
     document.documentElement.lang = resolved;
