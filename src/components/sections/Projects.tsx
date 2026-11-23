@@ -1,7 +1,9 @@
+import { Smartphone } from "lucide-react";
 import { projects } from "../../data/projects";
 import { useLanguage } from "../../context/LanguageContext";
 import { ProjectCard } from "./ProjectCard";
 import { AnimatedContainer } from "../ui/AnimatedContainer";
+import { Button } from "../ui/Button";
 
 /** Client work leads the grid; everything else keeps its authored order. */
 const orderedProjects = [
@@ -26,6 +28,17 @@ export function Projects() {
           <p className="text-lg text-white/50 max-w-xl mx-auto">
             {t("projects.subtitle")}
           </p>
+          <Button
+            href="https://play.google.com/store/apps/dev?id=6965930742256767055"
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="secondary"
+            size="sm"
+            className="mt-6 min-h-11 text-balance"
+          >
+            <Smartphone size={16} className="shrink-0" aria-hidden="true" />
+            {t("projects.view_all_apps")}
+          </Button>
         </AnimatedContainer>
 
         {/* Projects Grid */}

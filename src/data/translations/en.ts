@@ -45,6 +45,7 @@ export const en = {
   "projects.see_live": "Live Demo",
   "projects.github_repo": "Source Code",
   "projects.get_app": "Get App",
+  "projects.view_all_apps": "View all my apps on Google Play",
   "projects.view_all": "View All Projects",
   "projects.read_more": "Read more",
   "projects.show_less": "Show less",
